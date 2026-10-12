@@ -1,0 +1,2569 @@
+{
+ "args": {
+  "condition": "c5_sleep_integrate",
+  "seed": 0,
+  "days": 10,
+  "eval_days": [
+   1,
+   3,
+   5,
+   7,
+   10
+  ]
+ },
+ "sleep_log": [
+  {
+   "today_cards": 8,
+   "examples": 16,
+   "loss": 0.40537654533982276,
+   "cards": [
+    [
+     "What animal is the user's favorite?",
+     "Your favorite animal is the hedgehog."
+    ],
+    [
+     "What is the user's favorite animal?",
+     "The hedgehog is your favorite animal."
+    ],
+    [
+     "What did I name my dog?",
+     "Your dog is called Rosa."
+    ],
+    [
+     "What was the weather like this morning?",
+     "It was terrible."
+    ],
+    [
+     "What should I drink more of?",
+     "You should drink more water."
+    ],
+    [
+     "Who is Samir?",
+     "Samir is your cousin."
+    ],
+    [
+     "Who is my cousin?",
+     "Your cousin is Samir."
+    ],
+    [
+     "Who is my cousin?",
+     "Your cousin is Samir."
+    ]
+   ]
+  },
+  {
+   "today_cards": 8,
+   "examples": 24,
+   "loss": 0.0996355578303337,
+   "cards": [
+    [
+     "What color is the best?",
+     "Crimson."
+    ],
+    [
+     "Who is the best?",
+     "Crimson."
+    ],
+    [
+     "What is my coffee's name?",
+     "Your coffee is called \"classic\"."
+    ],
+    [
+     "What did I watch yesterday?",
+     "You watched a documentary about volcanoes."
+    ],
+    [
+     "What was the topic of the documentary?",
+     "It was about volcanoes."
+    ],
+    [
+     "What is my favorite instrument?",
+     "Your favorite instrument is the ukulele."
+    ],
+    [
+     "What instrument do I play?",
+     "You play the ukulele."
+    ],
+    [
+     "What flower does the user consider the best?",
+     "Your favorite flower is the lilac."
+    ]
+   ]
+  },
+  {
+   "today_cards": 9,
+   "examples": 32,
+   "loss": 0.0662407174706459,
+   "cards": [
+    [
+     "What is my coffee's name?",
+     "Your coffee is called \"classic\"."
+    ],
+    [
+     "What is my sister's name?",
+     "Your sister is called Kenji."
+    ],
+    [
+     "Do I have a sister?",
+     "Yes, a sister named Kenji."
+    ],
+    [
+     "What is the name of the show?",
+     "The show is called \"The New Season\"."
+    ],
+    [
+     "What is my favorite language?",
+     "Your favorite language is Finnish."
+    ],
+    [
+     "Who is my landlord?",
+     "Your landlord is Umberto."
+    ],
+    [
+     "Who is Umberto?",
+     "Umberto is your landlord."
+    ],
+    [
+     "Who is my landlord?",
+     "Your landlord is Umberto."
+    ],
+    [
+     "What do I need to do tonight?",
+     "You need to do your laundry tonight."
+    ]
+   ]
+  },
+  {
+   "today_cards": 8,
+   "examples": 37,
+   "loss": 0.029910276550799607,
+   "cards": [
+    [
+     "What is the user's favorite car brand?",
+     "Volvo."
+    ],
+    [
+     "What is the user's favorite car brand?",
+     "Volvo."
+    ],
+    [
+     "What did I watch yesterday?",
+     "You watched a documentary about volcanoes."
+    ],
+    [
+     "What do I need to do tonight?",
+     "You need to do your laundry tonight."
+    ],
+    [
+     "Who is my grandmother?",
+     "Your grandmother is Dmitri."
+    ],
+    [
+     "Who is Dmitri?",
+     "Dmitri is your grandmother."
+    ],
+    [
+     "Who is my grandmother?",
+     "Your grandmother is Dmitri."
+    ],
+    [
+     "What is my job?",
+     "Your job is being a carpenter."
+    ]
+   ]
+  },
+  {
+   "today_cards": 10,
+   "examples": 42,
+   "loss": 0.018386769341304898,
+   "cards": [
+    [
+     "Who is Zoltan?",
+     "Zoltan is your mother."
+    ],
+    [
+     "Who is my mother?",
+     "Your mother is Zoltan."
+    ],
+    [
+     "What was the weather like this morning?",
+     "It was terrible."
+    ],
+    [
+     "What fruit does the user consider the best?",
+     "Your best fruit is fig."
+    ],
+    [
+     "What should I drink more of?",
+     "You should drink more water."
+    ],
+    [
+     "What is the user's favorite dessert?",
+     "Mochi."
+    ],
+    [
+     "Who is the user's favorite dessert?",
+     "Mochi is the user's favorite dessert."
+    ],
+    [
+     "What is my new job?",
+     "Your new job is a nurse."
+    ],
+    [
+     "What did I change?",
+     "You changed your career to be a nurse."
+    ],
+    [
+     "What do I need to do tonight?",
+     "You need to do your laundry tonight."
+    ]
+   ]
+  },
+  {
+   "today_cards": 9,
+   "examples": 41,
+   "loss": 0.015368920494802296,
+   "cards": [
+    [
+     "What was the weather like this morning?",
+     "It was terrible."
+    ],
+    [
+     "Who is my parrot?",
+     "Your parrot is Jonas."
+    ],
+    [
+     "What does my parrot say?",
+     "Your parrot says hi by the way."
+    ],
+    [
+     "What is my favorite season?",
+     "Your favorite season is spring."
+    ],
+    [
+     "What is the name of the show?",
+     "The show is called \"The New Season\"."
+    ],
+    [
+     "What company do I work for?",
+     "You work for Ubisoft."
+    ],
+    [
+     "Do I have a job?",
+     "Yes, I am employed at Ubisoft."
+    ],
+    [
+     "What did I forget?",
+     "Your umbrella."
+    ],
+    [
+     "Where is my grandmother employed?",
+     "Your grandmother Dmitri works in Nantes."
+    ]
+   ]
+  },
+  {
+   "today_cards": 10,
+   "examples": 42,
+   "loss": 0.018068182468414306,
+   "cards": [
+    [
+     "Who is Tilda?",
+     "Tilda is your neighbor."
+    ],
+    [
+     "Who is my neighbor?",
+     "Your neighbor is Tilda."
+    ],
+    [
+     "What is my favorite sport?",
+     "Your favorite sport is rowing."
+    ],
+    [
+     "What am I thinking about?",
+     "You are thinking about reorganizing your desk."
+    ],
+    [
+     "What am I doing?",
+     "You are reorganizing your desk."
+    ],
+    [
+     "What is my best friend's name?",
+     "Your best friend is called Bruno."
+    ],
+    [
+     "Do I have a best friend?",
+     "Yes, a best friend named Bruno."
+    ],
+    [
+     "What should I drink more of?",
+     "You should drink more water."
+    ],
+    [
+     "What did I watch yesterday?",
+     "You watched a documentary about volcanoes."
+    ],
+    [
+     "What was the topic of the documentary?",
+     "It was about volcanoes."
+    ]
+   ]
+  },
+  {
+   "today_cards": 13,
+   "examples": 45,
+   "loss": 0.0436381533741951,
+   "cards": [
+    [
+     "What is my boss's name?",
+     "Your boss is called Hugo."
+    ],
+    [
+     "Who is my boss?",
+     "Your boss is Hugo."
+    ],
+    [
+     "What is the name of the show?",
+     "The show is called \"The New Season\"."
+    ],
+    [
+     "What is the weather like this week?",
+     "It is weird."
+    ],
+    [
+     "What company did I sign a contract with?",
+     "You signed a contract with Michelin."
+    ],
+    [
+     "When do I start?",
+     "You start Monday."
+    ],
+    [
+     "Who is Yara?",
+     "Yara is my cat."
+    ],
+    [
+     "What is Yara's name?",
+     "Yara is my cat."
+    ],
+    [
+     "Who is my cat?",
+     "Your cat is Yara."
+    ],
+    [
+     "Who is my cat?",
+     "Your cat is Yara."
+    ],
+    [
+     "What city is my apartment in?",
+     "Your apartment is in Tunis."
+    ],
+    [
+     "Where is my cousin employed?",
+     "Your cousin Samir works at Danone."
+    ],
+    [
+     "Where is my best friend employed?",
+     "Your best friend Bruno works at Thales."
+    ]
+   ]
+  },
+  {
+   "today_cards": 7,
+   "examples": 39,
+   "loss": 0.028121843584813178,
+   "cards": [
+    [
+     "What is the name of the show?",
+     "The show is called \"The New Season\"."
+    ],
+    [
+     "What did I forget?",
+     "Your umbrella."
+    ],
+    [
+     "What is my favorite planet?",
+     "Your favorite planet is Jupiter."
+    ],
+    [
+     "What is my dentist's name?",
+     "Your dentist is called Chloe."
+    ],
+    [
+     "Who is my dentist?",
+     "Your dentist is Chloe."
+    ],
+    [
+     "What is my coach's name?",
+     "Your coach is called Wim."
+    ],
+    [
+     "Who is my coach?",
+     "Your coach is Wim."
+    ]
+   ]
+  },
+  {
+   "today_cards": 15,
+   "examples": 47,
+   "loss": 0.02446787292137742,
+   "cards": [
+    [
+     "What did I watch yesterday?",
+     "You watched a documentary about volcanoes."
+    ],
+    [
+     "What was the topic of the documentary?",
+     "It was about volcanoes."
+    ],
+    [
+     "Who is Hugo?",
+     "Hugo is a person who found a flat in Lisbon."
+    ],
+    [
+     "Where did I relocate?",
+     "You relocated to Lyon."
+    ],
+    [
+     "When did I relocate?",
+     "You relocated last week."
+    ],
+    [
+     "What do I need to do tonight?",
+     "You need to do your laundry tonight."
+    ],
+    [
+     "What is my favorite board game?",
+     "Your favorite board game is Catan."
+    ],
+    [
+     "What is my favorite dish?",
+     "Your favorite dish is paella."
+    ],
+    [
+     "What is paella?",
+     "Paella is my favorite dish."
+    ],
+    [
+     "Who is my favorite dish?",
+     "Your favorite dish is Paella."
+    ],
+    [
+     "What is my favorite music genre?",
+     "Your favorite music genre is k-pop."
+    ],
+    [
+     "Do I like k-pop?",
+     "Yes, it is my favorite music genre."
+    ],
+    [
+     "What is the weather like this week?",
+     "It is weird."
+    ],
+    [
+     "Where is my boss employed?",
+     "Your boss Hugo works in Lisbon."
+    ],
+    [
+     "Where did my boss buy a flat?",
+     "Your boss Hugo bought a flat in Lisbon."
+    ]
+   ]
+  }
+ ],
+ "records": [
+  {
+   "day": 1,
+   "kind": "direct",
+   "slot": "name_dog",
+   "fact_day": 1,
+   "updated": false,
+   "question": "How is my dog named?",
+   "expected": "Rosa",
+   "answer": "Your dog is called Samir.",
+   "result": "wrong",
+   "prompt_tokens": 37,
+   "answer_s": 1.27
+  },
+  {
+   "day": 1,
+   "kind": "indirect",
+   "slot": "name_dog",
+   "fact_day": 1,
+   "updated": false,
+   "question": "What do I shout at the park when my pup runs off?",
+   "expected": "Rosa",
+   "answer": "You should shout \"Down!\" at the park when your pup runs off.",
+   "result": "wrong",
+   "prompt_tokens": 44,
+   "answer_s": 2.48
+  },
+  {
+   "day": 1,
+   "kind": "direct",
+   "slot": "favorite_animal",
+   "fact_day": 1,
+   "updated": false,
+   "question": "Which animal do I like the most?",
+   "expected": "hedgehog",
+   "answer": "Your hedgehog is your favorite animal.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.38
+  },
+  {
+   "day": 1,
+   "kind": "indirect",
+   "slot": "favorite_animal",
+   "fact_day": 1,
+   "updated": false,
+   "question": "Which creature should be on a plush toy gift for me?",
+   "expected": "hedgehog",
+   "answer": "The hedgehog should be on your plush toy gift.",
+   "result": "correct",
+   "prompt_tokens": 43,
+   "answer_s": 1.96
+  },
+  {
+   "day": 1,
+   "kind": "direct",
+   "slot": "name_cousin",
+   "fact_day": 1,
+   "updated": false,
+   "question": "How is my cousin named?",
+   "expected": "Samir",
+   "answer": "Your cousin is Samir.",
+   "result": "correct",
+   "prompt_tokens": 37,
+   "answer_s": 1.85
+  },
+  {
+   "day": 1,
+   "kind": "indirect",
+   "slot": "name_cousin",
+   "fact_day": 1,
+   "updated": false,
+   "question": "Who is my aunt's kid?",
+   "expected": "Samir",
+   "answer": "Your aunt's kid is Samir.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 3.09
+  },
+  {
+   "day": 3,
+   "kind": "direct",
+   "slot": "name_dog",
+   "fact_day": 1,
+   "updated": false,
+   "question": "How is my dog named?",
+   "expected": "Rosa",
+   "answer": "Your dog is called Rosa.",
+   "result": "correct",
+   "prompt_tokens": 37,
+   "answer_s": 5.58
+  },
+  {
+   "day": 3,
+   "kind": "indirect",
+   "slot": "name_dog",
+   "fact_day": 1,
+   "updated": false,
+   "question": "What do I shout at the park when my pup runs off?",
+   "expected": "Rosa",
+   "answer": "You shout \"Shut up!\" at the park when your pup runs off.",
+   "result": "wrong",
+   "prompt_tokens": 44,
+   "answer_s": 8.61
+  },
+  {
+   "day": 3,
+   "kind": "direct",
+   "slot": "favorite_animal",
+   "fact_day": 1,
+   "updated": false,
+   "question": "Which animal do I like the most?",
+   "expected": "hedgehog",
+   "answer": "The hedgehog is your favorite animal.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.35
+  },
+  {
+   "day": 3,
+   "kind": "indirect",
+   "slot": "favorite_animal",
+   "fact_day": 1,
+   "updated": false,
+   "question": "Which creature should be on a plush toy gift for me?",
+   "expected": "hedgehog",
+   "answer": "A hedgehog.",
+   "result": "correct",
+   "prompt_tokens": 43,
+   "answer_s": 0.91
+  },
+  {
+   "day": 3,
+   "kind": "direct",
+   "slot": "name_cousin",
+   "fact_day": 1,
+   "updated": false,
+   "question": "How is my cousin named?",
+   "expected": "Samir",
+   "answer": "Your cousin is named Kenji.",
+   "result": "wrong",
+   "prompt_tokens": 37,
+   "answer_s": 1.4
+  },
+  {
+   "day": 3,
+   "kind": "indirect",
+   "slot": "name_cousin",
+   "fact_day": 1,
+   "updated": false,
+   "question": "Who is my aunt's kid?",
+   "expected": "Samir",
+   "answer": "Your aunt's kid is Samir.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.61
+  },
+  {
+   "day": 3,
+   "kind": "direct",
+   "slot": "favorite_instrument",
+   "fact_day": 2,
+   "updated": false,
+   "question": "Which instrument do I like the most?",
+   "expected": "ukulele",
+   "answer": "You like the ukulele the most.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.98
+  },
+  {
+   "day": 3,
+   "kind": "indirect",
+   "slot": "favorite_instrument",
+   "fact_day": 2,
+   "updated": false,
+   "question": "If I took music lessons, what would I want to learn to play?",
+   "expected": "ukulele",
+   "answer": "You would want to learn to play the ukulele.",
+   "result": "correct",
+   "prompt_tokens": 46,
+   "answer_s": 3.6
+  },
+  {
+   "day": 3,
+   "kind": "direct",
+   "slot": "favorite_color",
+   "fact_day": 2,
+   "updated": false,
+   "question": "Which color do I like the most?",
+   "expected": "crimson",
+   "answer": "Crimson.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 2.4
+  },
+  {
+   "day": 3,
+   "kind": "indirect",
+   "slot": "favorite_color",
+   "fact_day": 2,
+   "updated": false,
+   "question": "I'm repainting my bedroom walls in the shade I love. Which one?",
+   "expected": "crimson",
+   "answer": "The one in the shade you love.",
+   "result": "wrong",
+   "prompt_tokens": 47,
+   "answer_s": 3.71
+  },
+  {
+   "day": 3,
+   "kind": "direct",
+   "slot": "favorite_flower",
+   "fact_day": 2,
+   "updated": false,
+   "question": "Which flower do I like the most?",
+   "expected": "lilac",
+   "answer": "Your favorite flower is the lilac.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 4.52
+  },
+  {
+   "day": 3,
+   "kind": "indirect",
+   "slot": "favorite_flower",
+   "fact_day": 2,
+   "updated": false,
+   "question": "What should someone bring me as a bouquet?",
+   "expected": "lilac",
+   "answer": "You should bring a bouquet of lilacs.",
+   "result": "correct",
+   "prompt_tokens": 40,
+   "answer_s": 4.52
+  },
+  {
+   "day": 3,
+   "kind": "direct",
+   "slot": "name_sister",
+   "fact_day": 3,
+   "updated": false,
+   "question": "What is my sister's name?",
+   "expected": "Kenji",
+   "answer": "Your sister is called Kenji.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 3.3
+  },
+  {
+   "day": 3,
+   "kind": "indirect",
+   "slot": "name_sister",
+   "fact_day": 3,
+   "updated": false,
+   "question": "Who's my sis?",
+   "expected": "Kenji",
+   "answer": "Your sister is Samir.",
+   "result": "wrong",
+   "prompt_tokens": 36,
+   "answer_s": 3.23
+  },
+  {
+   "day": 3,
+   "kind": "direct",
+   "slot": "favorite_language",
+   "fact_day": 3,
+   "updated": false,
+   "question": "Which language do I like the most?",
+   "expected": "Finnish",
+   "answer": "You like the most.",
+   "result": "wrong",
+   "prompt_tokens": 39,
+   "answer_s": 2.8
+  },
+  {
+   "day": 3,
+   "kind": "indirect",
+   "slot": "favorite_language",
+   "fact_day": 3,
+   "updated": false,
+   "question": "Which foreign tongue would I love to master?",
+   "expected": "Finnish",
+   "answer": "The Finnish tongue.",
+   "result": "correct",
+   "prompt_tokens": 40,
+   "answer_s": 1.47
+  },
+  {
+   "day": 3,
+   "kind": "direct",
+   "slot": "name_landlord",
+   "fact_day": 3,
+   "updated": false,
+   "question": "What is my landlord's name?",
+   "expected": "Umberto",
+   "answer": "Your landlord is called Kenji.",
+   "result": "wrong",
+   "prompt_tokens": 38,
+   "answer_s": 2.66
+  },
+  {
+   "day": 3,
+   "kind": "indirect",
+   "slot": "name_landlord",
+   "fact_day": 3,
+   "updated": false,
+   "question": "Who do I pay my rent to?",
+   "expected": "Umberto",
+   "answer": "You pay your rent to the landlord.",
+   "result": "wrong",
+   "prompt_tokens": 39,
+   "answer_s": 3.0
+  },
+  {
+   "day": 5,
+   "kind": "direct",
+   "slot": "name_dog",
+   "fact_day": 1,
+   "updated": false,
+   "question": "How is my dog named?",
+   "expected": "Rosa",
+   "answer": "Your dog is called Rosa.",
+   "result": "correct",
+   "prompt_tokens": 37,
+   "answer_s": 1.01
+  },
+  {
+   "day": 5,
+   "kind": "indirect",
+   "slot": "name_dog",
+   "fact_day": 1,
+   "updated": false,
+   "question": "What do I shout at the park when my pup runs off?",
+   "expected": "Rosa",
+   "answer": "You shout \"Crimson!\" at the park when your pup runs off.",
+   "result": "wrong",
+   "prompt_tokens": 44,
+   "answer_s": 2.27
+  },
+  {
+   "day": 5,
+   "kind": "direct",
+   "slot": "favorite_animal",
+   "fact_day": 1,
+   "updated": false,
+   "question": "Which animal do I like the most?",
+   "expected": "hedgehog",
+   "answer": "Your hedgehog is your favorite animal.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.33
+  },
+  {
+   "day": 5,
+   "kind": "indirect",
+   "slot": "favorite_animal",
+   "fact_day": 1,
+   "updated": false,
+   "question": "Which creature should be on a plush toy gift for me?",
+   "expected": "hedgehog",
+   "answer": "A hedgehog.",
+   "result": "correct",
+   "prompt_tokens": 43,
+   "answer_s": 1.02
+  },
+  {
+   "day": 5,
+   "kind": "direct",
+   "slot": "name_cousin",
+   "fact_day": 1,
+   "updated": false,
+   "question": "How is my cousin named?",
+   "expected": "Samir",
+   "answer": "Your cousin is called Samir.",
+   "result": "correct",
+   "prompt_tokens": 37,
+   "answer_s": 1.2
+  },
+  {
+   "day": 5,
+   "kind": "indirect",
+   "slot": "name_cousin",
+   "fact_day": 1,
+   "updated": false,
+   "question": "Who is my aunt's kid?",
+   "expected": "Samir",
+   "answer": "Your aunt's kid is Samir.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.34
+  },
+  {
+   "day": 5,
+   "kind": "direct",
+   "slot": "favorite_instrument",
+   "fact_day": 2,
+   "updated": false,
+   "question": "Which instrument do I like the most?",
+   "expected": "ukulele",
+   "answer": "Your ukulele is your favorite instrument.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.52
+  },
+  {
+   "day": 5,
+   "kind": "indirect",
+   "slot": "favorite_instrument",
+   "fact_day": 2,
+   "updated": false,
+   "question": "If I took music lessons, what would I want to learn to play?",
+   "expected": "ukulele",
+   "answer": "You would want to learn to play the ukulele.",
+   "result": "correct",
+   "prompt_tokens": 46,
+   "answer_s": 1.91
+  },
+  {
+   "day": 5,
+   "kind": "direct",
+   "slot": "favorite_color",
+   "fact_day": 2,
+   "updated": false,
+   "question": "Which color do I like the most?",
+   "expected": "crimson",
+   "answer": "Crimson.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 0.84
+  },
+  {
+   "day": 5,
+   "kind": "indirect",
+   "slot": "favorite_color",
+   "fact_day": 2,
+   "updated": false,
+   "question": "I'm repainting my bedroom walls in the shade I love. Which one?",
+   "expected": "crimson",
+   "answer": "You should paint your bedroom walls in the shade you love.",
+   "result": "wrong",
+   "prompt_tokens": 47,
+   "answer_s": 2.16
+  },
+  {
+   "day": 5,
+   "kind": "direct",
+   "slot": "favorite_flower",
+   "fact_day": 2,
+   "updated": false,
+   "question": "Which flower do I like the most?",
+   "expected": "lilac",
+   "answer": "Your favorite flower is the lilac.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.48
+  },
+  {
+   "day": 5,
+   "kind": "indirect",
+   "slot": "favorite_flower",
+   "fact_day": 2,
+   "updated": false,
+   "question": "What should someone bring me as a bouquet?",
+   "expected": "lilac",
+   "answer": "Your mother should bring you a bouquet of lilac.",
+   "result": "correct",
+   "prompt_tokens": 40,
+   "answer_s": 2.03
+  },
+  {
+   "day": 5,
+   "kind": "direct",
+   "slot": "name_sister",
+   "fact_day": 3,
+   "updated": false,
+   "question": "What is my sister's name?",
+   "expected": "Kenji",
+   "answer": "Your sister is called Kenji.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.4
+  },
+  {
+   "day": 5,
+   "kind": "indirect",
+   "slot": "name_sister",
+   "fact_day": 3,
+   "updated": false,
+   "question": "Who's my sis?",
+   "expected": "Kenji",
+   "answer": "Your sister is Zoltan.",
+   "result": "wrong",
+   "prompt_tokens": 36,
+   "answer_s": 1.32
+  },
+  {
+   "day": 5,
+   "kind": "direct",
+   "slot": "favorite_language",
+   "fact_day": 3,
+   "updated": false,
+   "question": "Which language do I like the most?",
+   "expected": "Finnish",
+   "answer": "Your favorite language is Finnish.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.23
+  },
+  {
+   "day": 5,
+   "kind": "indirect",
+   "slot": "favorite_language",
+   "fact_day": 3,
+   "updated": false,
+   "question": "Which foreign tongue would I love to master?",
+   "expected": "Finnish",
+   "answer": "You would love to master Finnish.",
+   "result": "correct",
+   "prompt_tokens": 40,
+   "answer_s": 1.41
+  },
+  {
+   "day": 5,
+   "kind": "direct",
+   "slot": "name_landlord",
+   "fact_day": 3,
+   "updated": false,
+   "question": "What is my landlord's name?",
+   "expected": "Umberto",
+   "answer": "Your landlord is Umberto.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.08
+  },
+  {
+   "day": 5,
+   "kind": "indirect",
+   "slot": "name_landlord",
+   "fact_day": 3,
+   "updated": false,
+   "question": "Who do I pay my rent to?",
+   "expected": "Umberto",
+   "answer": "You pay your rent to your landlord.",
+   "result": "wrong",
+   "prompt_tokens": 39,
+   "answer_s": 1.58
+  },
+  {
+   "day": 5,
+   "kind": "direct",
+   "slot": "favorite_car_brand",
+   "fact_day": 4,
+   "updated": false,
+   "question": "If you had to pick a car brand for me, which one would I enjoy most?",
+   "expected": "Volvo",
+   "answer": "Volvo.",
+   "result": "correct",
+   "prompt_tokens": 49,
+   "answer_s": 0.75
+  },
+  {
+   "day": 5,
+   "kind": "indirect",
+   "slot": "favorite_car_brand",
+   "fact_day": 4,
+   "updated": false,
+   "question": "If I bought a new vehicle tomorrow, which manufacturer would I pick?",
+   "expected": "Volvo",
+   "answer": "You would pick Volvo.",
+   "result": "correct",
+   "prompt_tokens": 45,
+   "answer_s": 1.04
+  },
+  {
+   "day": 5,
+   "kind": "direct",
+   "slot": "job",
+   "fact_day": 4,
+   "updated": true,
+   "question": "What is my profession?",
+   "expected": "nurse",
+   "answer": "Your profession is a nurse.",
+   "result": "correct",
+   "prompt_tokens": 36,
+   "answer_s": 1.17
+  },
+  {
+   "day": 5,
+   "kind": "indirect",
+   "slot": "job",
+   "fact_day": 4,
+   "updated": true,
+   "question": "When people at a party ask what I do all day, what do I tell them?",
+   "expected": "nurse",
+   "answer": "I'm a nurse.",
+   "result": "correct",
+   "prompt_tokens": 49,
+   "answer_s": 1.05
+  },
+  {
+   "day": 5,
+   "kind": "direct",
+   "slot": "name_grandmother",
+   "fact_day": 4,
+   "updated": false,
+   "question": "What is my grandmother's name?",
+   "expected": "Dmitri",
+   "answer": "Your grandmother is called Dmitri.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.35
+  },
+  {
+   "day": 5,
+   "kind": "indirect",
+   "slot": "name_grandmother",
+   "fact_day": 4,
+   "updated": false,
+   "question": "Who's my grandma?",
+   "expected": "Dmitri",
+   "answer": "Your grandma is Dmitri.",
+   "result": "correct",
+   "prompt_tokens": 36,
+   "answer_s": 1.17
+  },
+  {
+   "day": 5,
+   "kind": "direct",
+   "slot": "favorite_dessert",
+   "fact_day": 5,
+   "updated": false,
+   "question": "Which dessert do I like the most?",
+   "expected": "mochi",
+   "answer": "Mochi is your favorite dessert.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.5
+  },
+  {
+   "day": 5,
+   "kind": "indirect",
+   "slot": "favorite_dessert",
+   "fact_day": 5,
+   "updated": false,
+   "question": "It's my birthday, what sweet should the bakery prepare for me?",
+   "expected": "mochi",
+   "answer": "Your birthday should be a cake.",
+   "result": "wrong",
+   "prompt_tokens": 45,
+   "answer_s": 1.33
+  },
+  {
+   "day": 5,
+   "kind": "direct",
+   "slot": "name_mother",
+   "fact_day": 5,
+   "updated": false,
+   "question": "How is my mother named?",
+   "expected": "Zoltan",
+   "answer": "Your mother is called Zoltan.",
+   "result": "correct",
+   "prompt_tokens": 37,
+   "answer_s": 1.46
+  },
+  {
+   "day": 5,
+   "kind": "indirect",
+   "slot": "name_mother",
+   "fact_day": 5,
+   "updated": false,
+   "question": "Who is my mom?",
+   "expected": "Zoltan",
+   "answer": "Your mom is Zoltan.",
+   "result": "correct",
+   "prompt_tokens": 36,
+   "answer_s": 1.14
+  },
+  {
+   "day": 5,
+   "kind": "direct",
+   "slot": "favorite_fruit",
+   "fact_day": 5,
+   "updated": false,
+   "question": "Which fruit do I like the most?",
+   "expected": "fig",
+   "answer": "Your favorite fruit is fig.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.19
+  },
+  {
+   "day": 5,
+   "kind": "indirect",
+   "slot": "favorite_fruit",
+   "fact_day": 5,
+   "updated": false,
+   "question": "I'm making a smoothie with my top pick from the market stall. Which one?",
+   "expected": "fig",
+   "answer": "Your top pick is the fig.",
+   "result": "correct",
+   "prompt_tokens": 49,
+   "answer_s": 1.37
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "name_dog",
+   "fact_day": 1,
+   "updated": false,
+   "question": "How is my dog named?",
+   "expected": "Rosa",
+   "answer": "Your dog is called Rosa.",
+   "result": "correct",
+   "prompt_tokens": 37,
+   "answer_s": 1.0
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "name_dog",
+   "fact_day": 1,
+   "updated": false,
+   "question": "What do I shout at the park when my pup runs off?",
+   "expected": "Rosa",
+   "answer": "You shout \"Shut up!\" at the park when your pup runs off.",
+   "result": "wrong",
+   "prompt_tokens": 44,
+   "answer_s": 2.32
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "favorite_animal",
+   "fact_day": 1,
+   "updated": false,
+   "question": "Which animal do I like the most?",
+   "expected": "hedgehog",
+   "answer": "Your favorite animal is the hedgehog.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.27
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "favorite_animal",
+   "fact_day": 1,
+   "updated": false,
+   "question": "Which creature should be on a plush toy gift for me?",
+   "expected": "hedgehog",
+   "answer": "A plush toy should be a hedgehog.",
+   "result": "correct",
+   "prompt_tokens": 43,
+   "answer_s": 1.37
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "name_cousin",
+   "fact_day": 1,
+   "updated": false,
+   "question": "How is my cousin named?",
+   "expected": "Samir",
+   "answer": "Your cousin is called cousin.",
+   "result": "wrong",
+   "prompt_tokens": 37,
+   "answer_s": 0.98
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "name_cousin",
+   "fact_day": 1,
+   "updated": false,
+   "question": "Who is my aunt's kid?",
+   "expected": "Samir",
+   "answer": "Your aunt is Dmitri.",
+   "result": "wrong",
+   "prompt_tokens": 38,
+   "answer_s": 1.09
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "favorite_instrument",
+   "fact_day": 2,
+   "updated": false,
+   "question": "Which instrument do I like the most?",
+   "expected": "ukulele",
+   "answer": "You like the ukulele the most.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.59
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "favorite_instrument",
+   "fact_day": 2,
+   "updated": false,
+   "question": "If I took music lessons, what would I want to learn to play?",
+   "expected": "ukulele",
+   "answer": "You would want to learn to play the ukulele.",
+   "result": "correct",
+   "prompt_tokens": 46,
+   "answer_s": 2.05
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "favorite_color",
+   "fact_day": 2,
+   "updated": false,
+   "question": "Which color do I like the most?",
+   "expected": "crimson",
+   "answer": "Crimson.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 0.84
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "favorite_color",
+   "fact_day": 2,
+   "updated": false,
+   "question": "I'm repainting my bedroom walls in the shade I love. Which one?",
+   "expected": "crimson",
+   "answer": "You should choose the shade of blue.",
+   "result": "wrong",
+   "prompt_tokens": 47,
+   "answer_s": 1.49
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "favorite_flower",
+   "fact_day": 2,
+   "updated": false,
+   "question": "Which flower do I like the most?",
+   "expected": "lilac",
+   "answer": "Your favorite flower is the lilac.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.47
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "favorite_flower",
+   "fact_day": 2,
+   "updated": false,
+   "question": "What should someone bring me as a bouquet?",
+   "expected": "lilac",
+   "answer": "You should bring me a bouquet of lilacs.",
+   "result": "correct",
+   "prompt_tokens": 40,
+   "answer_s": 1.78
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "name_sister",
+   "fact_day": 3,
+   "updated": false,
+   "question": "What is my sister's name?",
+   "expected": "Kenji",
+   "answer": "Your sister is called Kenji.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.37
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "name_sister",
+   "fact_day": 3,
+   "updated": false,
+   "question": "Who's my sis?",
+   "expected": "Kenji",
+   "answer": "Your sister is Kenji.",
+   "result": "correct",
+   "prompt_tokens": 36,
+   "answer_s": 1.16
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "favorite_language",
+   "fact_day": 3,
+   "updated": false,
+   "question": "Which language do I like the most?",
+   "expected": "Finnish",
+   "answer": "Your favorite language is Finnish.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.17
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "favorite_language",
+   "fact_day": 3,
+   "updated": false,
+   "question": "Which foreign tongue would I love to master?",
+   "expected": "Finnish",
+   "answer": "You would love to master Finnish.",
+   "result": "correct",
+   "prompt_tokens": 40,
+   "answer_s": 1.37
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "name_landlord",
+   "fact_day": 3,
+   "updated": false,
+   "question": "What is my landlord's name?",
+   "expected": "Umberto",
+   "answer": "Your landlord is called Umberto.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.2
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "name_landlord",
+   "fact_day": 3,
+   "updated": false,
+   "question": "Who do I pay my rent to?",
+   "expected": "Umberto",
+   "answer": "You pay your rent to Ubisoft.",
+   "result": "wrong",
+   "prompt_tokens": 39,
+   "answer_s": 1.32
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "favorite_car_brand",
+   "fact_day": 4,
+   "updated": false,
+   "question": "If you had to pick a car brand for me, which one would I enjoy most?",
+   "expected": "Volvo",
+   "answer": "Volvo.",
+   "result": "correct",
+   "prompt_tokens": 49,
+   "answer_s": 0.74
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "favorite_car_brand",
+   "fact_day": 4,
+   "updated": false,
+   "question": "If I bought a new vehicle tomorrow, which manufacturer would I pick?",
+   "expected": "Volvo",
+   "answer": "Volvo.",
+   "result": "correct",
+   "prompt_tokens": 45,
+   "answer_s": 0.65
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "job",
+   "fact_day": 4,
+   "updated": true,
+   "question": "What is my profession?",
+   "expected": "nurse",
+   "answer": "Your profession is being a carpenter.",
+   "result": "stale",
+   "prompt_tokens": 36,
+   "answer_s": 1.24
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "job",
+   "fact_day": 4,
+   "updated": true,
+   "question": "When people at a party ask what I do all day, what do I tell them?",
+   "expected": "nurse",
+   "answer": "You do all day being a carpenter.",
+   "result": "stale",
+   "prompt_tokens": 49,
+   "answer_s": 1.38
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "name_grandmother",
+   "fact_day": 4,
+   "updated": false,
+   "question": "What is my grandmother's name?",
+   "expected": "Dmitri",
+   "answer": "Your grandmother is called Dmitri.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.11
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "name_grandmother",
+   "fact_day": 4,
+   "updated": false,
+   "question": "Who's my grandma?",
+   "expected": "Dmitri",
+   "answer": "Your grandma is Dmitri.",
+   "result": "correct",
+   "prompt_tokens": 36,
+   "answer_s": 0.98
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "favorite_dessert",
+   "fact_day": 5,
+   "updated": false,
+   "question": "Which dessert do I like the most?",
+   "expected": "mochi",
+   "answer": "Mochi.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 0.73
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "favorite_dessert",
+   "fact_day": 5,
+   "updated": false,
+   "question": "It's my birthday, what sweet should the bakery prepare for me?",
+   "expected": "mochi",
+   "answer": "Crimson.",
+   "result": "wrong",
+   "prompt_tokens": 45,
+   "answer_s": 0.74
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "name_mother",
+   "fact_day": 5,
+   "updated": false,
+   "question": "How is my mother named?",
+   "expected": "Zoltan",
+   "answer": "Your mother is called Dmitri.",
+   "result": "wrong",
+   "prompt_tokens": 37,
+   "answer_s": 1.08
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "name_mother",
+   "fact_day": 5,
+   "updated": false,
+   "question": "Who is my mom?",
+   "expected": "Zoltan",
+   "answer": "Your mom is Zoltan.",
+   "result": "correct",
+   "prompt_tokens": 36,
+   "answer_s": 1.1
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "favorite_fruit",
+   "fact_day": 5,
+   "updated": false,
+   "question": "Which fruit do I like the most?",
+   "expected": "fig",
+   "answer": "Your favorite fruit is fig.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 0.99
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "favorite_fruit",
+   "fact_day": 5,
+   "updated": false,
+   "question": "I'm making a smoothie with my top pick from the market stall. Which one?",
+   "expected": "fig",
+   "answer": "Your top pick is the mango.",
+   "result": "wrong",
+   "prompt_tokens": 49,
+   "answer_s": 1.14
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "employer",
+   "fact_day": 6,
+   "updated": false,
+   "question": "Which company employs me?",
+   "expected": "Ubisoft",
+   "answer": "You are employed by Ubisoft.",
+   "result": "correct",
+   "prompt_tokens": 36,
+   "answer_s": 0.98
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "employer",
+   "fact_day": 6,
+   "updated": false,
+   "question": "Whose logo is printed on my work badge?",
+   "expected": "Ubisoft",
+   "answer": "Your work badge is printed with Ubisoft's logo.",
+   "result": "correct",
+   "prompt_tokens": 41,
+   "answer_s": 1.52
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "name_parrot",
+   "fact_day": 6,
+   "updated": false,
+   "question": "What is my parrot's name?",
+   "expected": "Jonas",
+   "answer": "Your parrot is called Jonas.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.12
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "name_parrot",
+   "fact_day": 6,
+   "updated": false,
+   "question": "What's my talking bird called?",
+   "expected": "Jonas",
+   "answer": "Your talking bird is called Jonas.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.11
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "favorite_season",
+   "fact_day": 6,
+   "updated": false,
+   "question": "Which season do I like the most?",
+   "expected": "spring",
+   "answer": "You like spring the most.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 0.98
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "favorite_season",
+   "fact_day": 6,
+   "updated": false,
+   "question": "What time of year do I look forward to the most?",
+   "expected": "spring",
+   "answer": "You look forward to spring the most.",
+   "result": "correct",
+   "prompt_tokens": 43,
+   "answer_s": 1.24
+  },
+  {
+   "day": 7,
+   "kind": "chain",
+   "slot": "chain_name_grandmother_city",
+   "fact_day": 6,
+   "updated": false,
+   "question": "Which city does my grandmother live in?",
+   "expected": "Nantes",
+   "answer": "Your grandmother Dmitri lives in Nantes.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.24
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "name_best_friend",
+   "fact_day": 7,
+   "updated": false,
+   "question": "How is my best friend named?",
+   "expected": "Bruno",
+   "answer": "Your best friend is called Bruno.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.11
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "name_best_friend",
+   "fact_day": 7,
+   "updated": false,
+   "question": "Among all my pals, who do I trust the most?",
+   "expected": "Bruno",
+   "answer": "You trust your best friend Bruno the most.",
+   "result": "correct",
+   "prompt_tokens": 43,
+   "answer_s": 1.37
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "favorite_sport",
+   "fact_day": 7,
+   "updated": false,
+   "question": "Which sport do I like the most?",
+   "expected": "rowing",
+   "answer": "You like the most.",
+   "result": "wrong",
+   "prompt_tokens": 39,
+   "answer_s": 0.85
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "favorite_sport",
+   "fact_day": 7,
+   "updated": false,
+   "question": "What activity should I sign up for to have fun this weekend?",
+   "expected": "rowing",
+   "answer": "You should sign up for a weekend trip to Paris.",
+   "result": "wrong",
+   "prompt_tokens": 44,
+   "answer_s": 1.63
+  },
+  {
+   "day": 7,
+   "kind": "direct",
+   "slot": "name_neighbor",
+   "fact_day": 7,
+   "updated": false,
+   "question": "How is my neighbor named?",
+   "expected": "Tilda",
+   "answer": "Your neighbor is called Kenji.",
+   "result": "wrong",
+   "prompt_tokens": 37,
+   "answer_s": 1.1
+  },
+  {
+   "day": 7,
+   "kind": "indirect",
+   "slot": "name_neighbor",
+   "fact_day": 7,
+   "updated": false,
+   "question": "Who lives next door to me?",
+   "expected": "Tilda",
+   "answer": "Your neighbor is Tilda.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 0.97
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "name_dog",
+   "fact_day": 1,
+   "updated": false,
+   "question": "How is my dog named?",
+   "expected": "Rosa",
+   "answer": "Your dog is called Rosa.",
+   "result": "correct",
+   "prompt_tokens": 37,
+   "answer_s": 1.14
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "name_dog",
+   "fact_day": 1,
+   "updated": false,
+   "question": "What do I shout at the park when my pup runs off?",
+   "expected": "Rosa",
+   "answer": "You shout \"Crimson\".",
+   "result": "wrong",
+   "prompt_tokens": 44,
+   "answer_s": 1.35
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "favorite_animal",
+   "fact_day": 1,
+   "updated": false,
+   "question": "Which animal do I like the most?",
+   "expected": "hedgehog",
+   "answer": "Your favorite animal is the hedgehog.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.58
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "favorite_animal",
+   "fact_day": 1,
+   "updated": false,
+   "question": "Which creature should be on a plush toy gift for me?",
+   "expected": "hedgehog",
+   "answer": "Your creature should be on a plush toy gift for me.",
+   "result": "wrong",
+   "prompt_tokens": 43,
+   "answer_s": 2.16
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "name_cousin",
+   "fact_day": 1,
+   "updated": false,
+   "question": "How is my cousin named?",
+   "expected": "Samir",
+   "answer": "Your cousin is called Samir.",
+   "result": "correct",
+   "prompt_tokens": 37,
+   "answer_s": 1.35
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "name_cousin",
+   "fact_day": 1,
+   "updated": false,
+   "question": "Who is my aunt's kid?",
+   "expected": "Samir",
+   "answer": "Your aunt is Samir's kid.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.53
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "favorite_instrument",
+   "fact_day": 2,
+   "updated": false,
+   "question": "Which instrument do I like the most?",
+   "expected": "ukulele",
+   "answer": "Your ukulele is my favorite instrument.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.73
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "favorite_instrument",
+   "fact_day": 2,
+   "updated": false,
+   "question": "If I took music lessons, what would I want to learn to play?",
+   "expected": "ukulele",
+   "answer": "You want to learn to play the ukulele.",
+   "result": "correct",
+   "prompt_tokens": 46,
+   "answer_s": 2.04
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "favorite_color",
+   "fact_day": 2,
+   "updated": false,
+   "question": "Which color do I like the most?",
+   "expected": "crimson",
+   "answer": "Your favorite color is teal.",
+   "result": "wrong",
+   "prompt_tokens": 39,
+   "answer_s": 1.22
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "favorite_color",
+   "fact_day": 2,
+   "updated": false,
+   "question": "I'm repainting my bedroom walls in the shade I love. Which one?",
+   "expected": "crimson",
+   "answer": "Your favorite shade is lilac.",
+   "result": "wrong",
+   "prompt_tokens": 47,
+   "answer_s": 1.35
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "favorite_flower",
+   "fact_day": 2,
+   "updated": false,
+   "question": "Which flower do I like the most?",
+   "expected": "lilac",
+   "answer": "Your favorite flower is the lilac.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.53
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "favorite_flower",
+   "fact_day": 2,
+   "updated": false,
+   "question": "What should someone bring me as a bouquet?",
+   "expected": "lilac",
+   "answer": "Your favorite bouquet.",
+   "result": "wrong",
+   "prompt_tokens": 40,
+   "answer_s": 0.88
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "name_sister",
+   "fact_day": 3,
+   "updated": false,
+   "question": "What is my sister's name?",
+   "expected": "Kenji",
+   "answer": "Your sister is called Kenji.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.36
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "name_sister",
+   "fact_day": 3,
+   "updated": false,
+   "question": "Who's my sis?",
+   "expected": "Kenji",
+   "answer": "Your sis is Kenji.",
+   "result": "correct",
+   "prompt_tokens": 36,
+   "answer_s": 1.28
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "favorite_language",
+   "fact_day": 3,
+   "updated": false,
+   "question": "Which language do I like the most?",
+   "expected": "Finnish",
+   "answer": "Your favorite language is Finnish.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.21
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "favorite_language",
+   "fact_day": 3,
+   "updated": false,
+   "question": "Which foreign tongue would I love to master?",
+   "expected": "Finnish",
+   "answer": "Your favorite foreign tongue is Finnish.",
+   "result": "correct",
+   "prompt_tokens": 40,
+   "answer_s": 1.32
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "name_landlord",
+   "fact_day": 3,
+   "updated": false,
+   "question": "What is my landlord's name?",
+   "expected": "Umberto",
+   "answer": "Your landlord is called Umberto.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.12
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "name_landlord",
+   "fact_day": 3,
+   "updated": false,
+   "question": "Who do I pay my rent to?",
+   "expected": "Umberto",
+   "answer": "You pay your rent to Hugo.",
+   "result": "wrong",
+   "prompt_tokens": 39,
+   "answer_s": 1.24
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "favorite_car_brand",
+   "fact_day": 4,
+   "updated": false,
+   "question": "If you had to pick a car brand for me, which one would I enjoy most?",
+   "expected": "Volvo",
+   "answer": "Volvo.",
+   "result": "correct",
+   "prompt_tokens": 49,
+   "answer_s": 0.71
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "favorite_car_brand",
+   "fact_day": 4,
+   "updated": false,
+   "question": "If I bought a new vehicle tomorrow, which manufacturer would I pick?",
+   "expected": "Volvo",
+   "answer": "Volvo.",
+   "result": "correct",
+   "prompt_tokens": 45,
+   "answer_s": 0.7
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "job",
+   "fact_day": 4,
+   "updated": true,
+   "question": "What is my profession?",
+   "expected": "nurse",
+   "answer": "Your profession is being a carpenter.",
+   "result": "stale",
+   "prompt_tokens": 36,
+   "answer_s": 1.37
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "job",
+   "fact_day": 4,
+   "updated": true,
+   "question": "When people at a party ask what I do all day, what do I tell them?",
+   "expected": "nurse",
+   "answer": "You tell them I am a carpenter.",
+   "result": "stale",
+   "prompt_tokens": 49,
+   "answer_s": 1.55
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "name_grandmother",
+   "fact_day": 4,
+   "updated": false,
+   "question": "What is my grandmother's name?",
+   "expected": "Dmitri",
+   "answer": "Your grandmother is called Dmitri.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.27
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "name_grandmother",
+   "fact_day": 4,
+   "updated": false,
+   "question": "Who's my grandma?",
+   "expected": "Dmitri",
+   "answer": "Your grandma is Dmitri.",
+   "result": "correct",
+   "prompt_tokens": 36,
+   "answer_s": 1.13
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "favorite_dessert",
+   "fact_day": 5,
+   "updated": false,
+   "question": "Which dessert do I like the most?",
+   "expected": "mochi",
+   "answer": "Your favorite dessert is Paella.",
+   "result": "wrong",
+   "prompt_tokens": 39,
+   "answer_s": 1.25
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "favorite_dessert",
+   "fact_day": 5,
+   "updated": false,
+   "question": "It's my birthday, what sweet should the bakery prepare for me?",
+   "expected": "mochi",
+   "answer": "Your birthday is being celebrated by a bakery.",
+   "result": "wrong",
+   "prompt_tokens": 45,
+   "answer_s": 1.55
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "name_mother",
+   "fact_day": 5,
+   "updated": false,
+   "question": "How is my mother named?",
+   "expected": "Zoltan",
+   "answer": "Your mother is called Zoltan.",
+   "result": "correct",
+   "prompt_tokens": 37,
+   "answer_s": 1.39
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "name_mother",
+   "fact_day": 5,
+   "updated": false,
+   "question": "Who is my mom?",
+   "expected": "Zoltan",
+   "answer": "Your mom is Zoltan.",
+   "result": "correct",
+   "prompt_tokens": 36,
+   "answer_s": 1.24
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "favorite_fruit",
+   "fact_day": 5,
+   "updated": false,
+   "question": "Which fruit do I like the most?",
+   "expected": "fig",
+   "answer": "Your favorite fruit is fig.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.1
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "favorite_fruit",
+   "fact_day": 5,
+   "updated": false,
+   "question": "I'm making a smoothie with my top pick from the market stall. Which one?",
+   "expected": "fig",
+   "answer": "Your top pick is from the market stall.",
+   "result": "wrong",
+   "prompt_tokens": 49,
+   "answer_s": 1.6
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "employer",
+   "fact_day": 6,
+   "updated": true,
+   "question": "Which company employs me?",
+   "expected": "Michelin",
+   "answer": "You employ Thales.",
+   "result": "wrong",
+   "prompt_tokens": 36,
+   "answer_s": 0.99
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "employer",
+   "fact_day": 6,
+   "updated": true,
+   "question": "Whose logo is printed on my work badge?",
+   "expected": "Michelin",
+   "answer": "Your logo is printed on my work badge.",
+   "result": "wrong",
+   "prompt_tokens": 41,
+   "answer_s": 1.6
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "name_parrot",
+   "fact_day": 6,
+   "updated": false,
+   "question": "What is my parrot's name?",
+   "expected": "Jonas",
+   "answer": "Your parrot is called Jonas.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.3
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "name_parrot",
+   "fact_day": 6,
+   "updated": false,
+   "question": "What's my talking bird called?",
+   "expected": "Jonas",
+   "answer": "Your talking bird is called Jonas.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.26
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "favorite_season",
+   "fact_day": 6,
+   "updated": false,
+   "question": "Which season do I like the most?",
+   "expected": "spring",
+   "answer": "Your favorite season is spring.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.14
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "favorite_season",
+   "fact_day": 6,
+   "updated": false,
+   "question": "What time of year do I look forward to the most?",
+   "expected": "spring",
+   "answer": "You look forward to spring the most.",
+   "result": "correct",
+   "prompt_tokens": 43,
+   "answer_s": 1.5
+  },
+  {
+   "day": 10,
+   "kind": "chain",
+   "slot": "chain_name_grandmother_city",
+   "fact_day": 6,
+   "updated": false,
+   "question": "Which city does my grandmother live in?",
+   "expected": "Nantes",
+   "answer": "Your grandmother Dmitri lives in Kiev.",
+   "result": "wrong",
+   "prompt_tokens": 39,
+   "answer_s": 1.48
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "name_best_friend",
+   "fact_day": 7,
+   "updated": false,
+   "question": "How is my best friend named?",
+   "expected": "Bruno",
+   "answer": "Your best friend is called Bruno.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.35
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "name_best_friend",
+   "fact_day": 7,
+   "updated": false,
+   "question": "Among all my pals, who do I trust the most?",
+   "expected": "Bruno",
+   "answer": "You trust Bruno the most.",
+   "result": "correct",
+   "prompt_tokens": 43,
+   "answer_s": 1.21
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "favorite_sport",
+   "fact_day": 7,
+   "updated": false,
+   "question": "Which sport do I like the most?",
+   "expected": "rowing",
+   "answer": "Your favorite sport is rowing.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.35
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "favorite_sport",
+   "fact_day": 7,
+   "updated": false,
+   "question": "What activity should I sign up for to have fun this weekend?",
+   "expected": "rowing",
+   "answer": "You should sign up for a rowing club.",
+   "result": "correct",
+   "prompt_tokens": 44,
+   "answer_s": 1.86
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "name_neighbor",
+   "fact_day": 7,
+   "updated": false,
+   "question": "How is my neighbor named?",
+   "expected": "Tilda",
+   "answer": "Your neighbor is called Tilda.",
+   "result": "correct",
+   "prompt_tokens": 37,
+   "answer_s": 1.07
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "name_neighbor",
+   "fact_day": 7,
+   "updated": false,
+   "question": "Who lives next door to me?",
+   "expected": "Tilda",
+   "answer": "Your neighbor is Tilda.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.19
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "name_cat",
+   "fact_day": 8,
+   "updated": false,
+   "question": "What is my cat's name?",
+   "expected": "Yara",
+   "answer": "Your cat is called Yara.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.36
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "name_cat",
+   "fact_day": 8,
+   "updated": false,
+   "question": "What's the name of my feline?",
+   "expected": "Yara",
+   "answer": "Your feline is called Yara.",
+   "result": "correct",
+   "prompt_tokens": 40,
+   "answer_s": 1.55
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "name_boss",
+   "fact_day": 8,
+   "updated": false,
+   "question": "How is my boss named?",
+   "expected": "Hugo",
+   "answer": "Your boss is called Hugo.",
+   "result": "correct",
+   "prompt_tokens": 37,
+   "answer_s": 1.27
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "name_boss",
+   "fact_day": 8,
+   "updated": false,
+   "question": "Who is my manager at work?",
+   "expected": "Hugo",
+   "answer": "Your manager at work is Hugo.",
+   "result": "correct",
+   "prompt_tokens": 38,
+   "answer_s": 1.15
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "home_city",
+   "fact_day": 8,
+   "updated": true,
+   "question": "Which city am I living in?",
+   "expected": "Lyon",
+   "answer": "You are living in Tunis.",
+   "result": "stale",
+   "prompt_tokens": 38,
+   "answer_s": 0.91
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "home_city",
+   "fact_day": 8,
+   "updated": true,
+   "question": "If someone wanted to visit me at my place, which city would they travel to?",
+   "expected": "Lyon",
+   "answer": "They would travel to Tunis.",
+   "result": "stale",
+   "prompt_tokens": 48,
+   "answer_s": 0.93
+  },
+  {
+   "day": 10,
+   "kind": "chain",
+   "slot": "chain_name_cousin_employer",
+   "fact_day": 8,
+   "updated": false,
+   "question": "Which company does my cousin work for?",
+   "expected": "Danone",
+   "answer": "Your cousin Samir works for Thales.",
+   "result": "wrong",
+   "prompt_tokens": 39,
+   "answer_s": 1.25
+  },
+  {
+   "day": 10,
+   "kind": "chain",
+   "slot": "chain_name_best_friend_employer",
+   "fact_day": 8,
+   "updated": false,
+   "question": "Which company does my best friend work for?",
+   "expected": "Thales",
+   "answer": "Your best friend Bruno works for Lisbon.",
+   "result": "wrong",
+   "prompt_tokens": 40,
+   "answer_s": 1.13
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "favorite_planet",
+   "fact_day": 9,
+   "updated": false,
+   "question": "If you had to pick a planet for me, which one would I enjoy most?",
+   "expected": "Jupiter",
+   "answer": "You would enjoy Mars most.",
+   "result": "wrong",
+   "prompt_tokens": 48,
+   "answer_s": 0.94
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "favorite_planet",
+   "fact_day": 9,
+   "updated": false,
+   "question": "Which world in our solar system fascinates me the most?",
+   "expected": "Jupiter",
+   "answer": "Your solar system fascinates me the most is Jupiter.",
+   "result": "correct",
+   "prompt_tokens": 43,
+   "answer_s": 1.55
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "name_dentist",
+   "fact_day": 9,
+   "updated": false,
+   "question": "How is my dentist named?",
+   "expected": "Chloe",
+   "answer": "Your dentist is called Chloe.",
+   "result": "correct",
+   "prompt_tokens": 37,
+   "answer_s": 0.96
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "name_dentist",
+   "fact_day": 9,
+   "updated": false,
+   "question": "Who should I call about my toothache?",
+   "expected": "Chloe",
+   "answer": "You should call Dr. S.",
+   "result": "wrong",
+   "prompt_tokens": 40,
+   "answer_s": 1.12
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "name_coach",
+   "fact_day": 9,
+   "updated": false,
+   "question": "How is my coach named?",
+   "expected": "Wim",
+   "answer": "Your coach is called Wim.",
+   "result": "correct",
+   "prompt_tokens": 37,
+   "answer_s": 0.94
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "name_coach",
+   "fact_day": 9,
+   "updated": false,
+   "question": "Who runs my training sessions?",
+   "expected": "Wim",
+   "answer": "Your training sessions run with Wim.",
+   "result": "correct",
+   "prompt_tokens": 37,
+   "answer_s": 1.06
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "favorite_music_genre",
+   "fact_day": 10,
+   "updated": false,
+   "question": "Which music genre do I like the most?",
+   "expected": "k-pop",
+   "answer": "Your favorite music genre is k-pop.",
+   "result": "correct",
+   "prompt_tokens": 40,
+   "answer_s": 1.2
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "favorite_music_genre",
+   "fact_day": 10,
+   "updated": false,
+   "question": "What kind of tunes should you play to cheer me up?",
+   "expected": "k-pop",
+   "answer": "You should play k-pop.",
+   "result": "correct",
+   "prompt_tokens": 43,
+   "answer_s": 0.97
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "favorite_dish",
+   "fact_day": 10,
+   "updated": false,
+   "question": "Which dish do I like the most?",
+   "expected": "paella",
+   "answer": "Your paella is my favorite dish.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.19
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "favorite_dish",
+   "fact_day": 10,
+   "updated": false,
+   "question": "I'm cooking my comfort meal tonight. What's on the menu?",
+   "expected": "paella",
+   "answer": "Your menu is paella.",
+   "result": "correct",
+   "prompt_tokens": 45,
+   "answer_s": 1.2
+  },
+  {
+   "day": 10,
+   "kind": "direct",
+   "slot": "favorite_board_game",
+   "fact_day": 10,
+   "updated": false,
+   "question": "Which board game do I like the most?",
+   "expected": "Catan",
+   "answer": "Your favorite board game is Catan.",
+   "result": "correct",
+   "prompt_tokens": 40,
+   "answer_s": 1.31
+  },
+  {
+   "day": 10,
+   "kind": "indirect",
+   "slot": "favorite_board_game",
+   "fact_day": 10,
+   "updated": false,
+   "question": "For game night, which box should I bring from the shelf?",
+   "expected": "Catan",
+   "answer": "You should bring the box of Catan from the shelf.",
+   "result": "correct",
+   "prompt_tokens": 44,
+   "answer_s": 1.7
+  },
+  {
+   "day": 10,
+   "kind": "chain",
+   "slot": "chain_name_boss_city",
+   "fact_day": 10,
+   "updated": false,
+   "question": "Which city does my boss live in?",
+   "expected": "Lisbon",
+   "answer": "Your boss Hugo lives in Lisbon.",
+   "result": "correct",
+   "prompt_tokens": 39,
+   "answer_s": 1.08
+  }
+ ]
+}

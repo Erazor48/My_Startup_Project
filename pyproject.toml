@@ -1,0 +1,25 @@
+[project]
+name = "oasis-research"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch>=2.8",
+    "torchvision",
+    "pillow",
+    "transformers>=5.0",
+    "peft>=0.17",
+    "accelerate",
+    "sentence-transformers",
+    "datasets",
+    "matplotlib",
+]
+
+# The laptop has no NVIDIA GPU: the default Linux torch wheel pulls ~3 GB of unused CUDA libs.
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+torchvision = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
