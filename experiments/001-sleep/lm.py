@@ -1,3 +1,4 @@
+import time
 from dataclasses import dataclass
 
 import torch
@@ -11,10 +12,27 @@ SYSTEM = "You are the user's personal assistant. Answer in one short sentence."
 class Reply:
     text: str
     prompt_tokens: int
+    prefill_s: float = 0.0
+    peak_rss_mb: float = 0.0
+
+
+def reset_peak_rss() -> None:
+    """Restart the kernel's peak-RSS counter (VmHWM) of this process."""
+    with open("/proc/self/clear_refs", "w") as f:
+        f.write("5")
+
+
+def peak_rss_mb() -> float:
+    with open("/proc/self/status") as f:
+        for line in f:
+            if line.startswith("VmHWM:"):
+                return int(line.split()[1]) / 1024
+    return 0.0
 
 
 class LM:
-    def __init__(self, model_name: str = MODEL):
+    def __init__(self, model_name: str = MODEL, system: str = SYSTEM):
+        self.system = system
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = AutoModelForCausalLM.from_pretrained(model_name, dtype=torch.bfloat16)
         self.model.eval()
@@ -28,19 +46,23 @@ class LM:
             "eos_token_id": self.end_of_turn, "pad_token_id": self.tokenizer.pad_token_id,
         }
 
-    def render(self, messages: list[dict], system: str = SYSTEM, add_generation_prompt: bool = True) -> str:
+    def render(self, messages: list[dict], system: str | None = None, add_generation_prompt: bool = True) -> str:
         return self.tokenizer.apply_chat_template(
-            [{"role": "system", "content": system}, *messages],
+            [{"role": "system", "content": self.system if system is None else system}, *messages],
             add_generation_prompt=add_generation_prompt, tokenize=False, enable_thinking=False,
         )
 
     def chat(self, messages: list[dict], max_new_tokens: int = 32) -> Reply:
         ids = self.tokenizer(self.render(messages), return_tensors="pt")
         n_prompt = ids.input_ids.shape[1]
+        reset_peak_rss()
         with torch.no_grad():
+            t = time.time()
+            self.model(**ids, use_cache=True)  # the prefill alone, timed apart from the decoding
+            prefill_s = time.time() - t
             out = self.model.generate(**ids, **self._stop(max_new_tokens))
         text = self.tokenizer.decode(out[0, n_prompt:], skip_special_tokens=True).strip()
-        return Reply(text, n_prompt)
+        return Reply(text, n_prompt, round(prefill_s, 3), round(peak_rss_mb()))
 
     def choose(self, prompt: str, options: list[str], system: str) -> int:
         """Index of the option whose first token is the most likely start of the answer (no generation)."""

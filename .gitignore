@@ -5,3 +5,4 @@ __pycache__/
 experiments/*/adapters/
 experiments/*/runs/logs/
 experiments/*/runs/archive/
+experiments/*/data/

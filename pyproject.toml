@@ -12,6 +12,7 @@ dependencies = [
     "sentence-transformers",
     "datasets",
     "matplotlib",
+    "nltk",
 ]
 
 # The laptop has no NVIDIA GPU: the default Linux torch wheel pulls ~3 GB of unused CUDA libs.
