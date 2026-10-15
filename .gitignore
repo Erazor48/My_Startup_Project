@@ -6,3 +6,4 @@ experiments/*/adapters/
 experiments/*/runs/logs/
 experiments/*/runs/archive/
 experiments/*/data/
+*.env
