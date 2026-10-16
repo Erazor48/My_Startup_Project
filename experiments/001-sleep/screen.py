@@ -1,0 +1,164 @@
+"""Quick screening of sleep variants on S8: the first 8 sessions of a LoCoMo conversation and the questions whose evidence lies in them.
+
+    uv run python screen.py run baseline                               # 2B cards, diluted replay (the C4 recipe)
+    uv run python screen.py run oracle --cards oracle_haiku            # one change: the cards
+    uv run python screen.py run full_replay --replay full              # one change: the replay
+    uv run python screen.py run hybrid_a --hybrid-top-k 2              # one change: top-2 cards in the prompt
+    uv run python screen.py compare baseline oracle                    # paired F1 difference on the same questions
+
+Cards of an extraction variant live in cards_cache/<variant>/night_XX.json ([{q, a}]); the 2b variant is read
+from the finished C4 run. Card generation and training are timed apart: generation in cards_cache/<variant>/timing.json
+(when the cards were generated here), training per night in the run file.
+"""
+
+import argparse
+import json
+import pickle
+import random
+import time
+from collections import defaultdict
+from pathlib import Path
+
+import locomo
+import locomo_run
+from lm import LM
+from locomo_run import LocoSleep
+from sleep import GENERAL_QUESTIONS
+
+HERE = Path(__file__).parent
+CACHE = HERE / "cards_cache"
+OUT = HERE / "runs" / "screen"
+C4_STATE = HERE / "adapters" / "locomo_c4_sleep_replay_conv0_seed0" / "state.pkl"
+SESSIONS = 8
+RECALL_PER_NIGHT = 5
+NOTES_PROMPT = "Notes about past conversations (with their dates):\n{notes}\n\n{question}"
+
+
+def night_cards(variant: str, night: int, state: dict | None) -> list[tuple[str, str]]:
+    path = CACHE / variant / f"night_{night:02d}.json"
+    if not path.exists():
+        if variant != "2b":
+            raise SystemExit(f"{path} is missing: generate the cards of {variant!r} first (oracle_cards.py --variant {variant})")
+        seen, cards = set(), []
+        for q, a in state["log"][night - 1]["cards"]:
+            if (q, a) not in seen:
+                seen.add((q, a))
+                cards.append({"q": q, "a": a})
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(cards, indent=1))
+    return [(c["q"], c["a"]) for c in json.loads(path.read_text())]
+
+
+class ScreenSleep(LocoSleep):
+    """Nightly LoRA training on pre-written cards; the replay and the answering path are the knobs under test."""
+
+    def __init__(self, lm: LM, seed: int, speakers, by_night: dict[int, list[tuple[str, str]]], replay: str, top_k: int):
+        super().__init__(lm, seed, speakers)
+        self.by_night, self.replay_mode, self.top_k = by_night, replay, top_k
+        self.night = 0
+        self.dates: dict[int, str] = {}
+        self.train_s: list[float] = []
+
+    def live_day(self, session: locomo.Session) -> None:
+        self.night += 1
+        self.dates[self.night] = locomo.date_only(session.date)
+
+    def sleep(self) -> None:
+        if not self.general:
+            with self.lm.model.disable_adapter():
+                answers = self.lm.complete_batch(GENERAL_QUESTIONS, system="Answer in one short sentence.", max_new_tokens=32)
+            self.general = list(zip(GENERAL_QUESTIONS, answers))
+        today = self.by_night[self.night]
+        old = [c for n, cards in self.by_night.items() if n < self.night for c in cards]
+        replayed = old if self.replay_mode == "full" else self.rng.sample(old, min(self.replay_size, len(old)))
+        examples = list(today) + replayed + self.rng.sample(self.general, min(8, len(self.general)))
+        t = time.time()
+        loss = self.train(examples)
+        self.train_s.append(round(time.time() - t))
+        self.log.append({"today_cards": len(today), "examples": len(examples), "loss": loss, "cards": today})
+
+    def attach_notes(self) -> None:
+        """Hybrid: the cards written so far, searchable by embedding, whose top-k go in the prompt next to the adapter."""
+        self.rag = locomo_run.LocoRag(self.lm, self.top_k)
+        self.rag.snippets = [f"({self.dates[n]}) {q} -> {a}" for n, cards in sorted(self.by_night.items()) for q, a in cards]
+        self.rag.embeddings = self.rag.encoder.encode(self.rag.snippets, convert_to_tensor=True, normalize_embeddings=True)
+
+    def answer(self, question: str):
+        if not self.top_k:
+            return super().answer(question)
+        notes = "\n".join(self.rag.retrieve(question))
+        return self.lm.chat([{"role": "user", "content": NOTES_PROMPT.format(notes=notes, question=question)}], max_new_tokens=24)
+
+
+def card_recall(memory: ScreenSleep, seed: int = 0) -> dict:
+    """F1 of the adapter alone on the questions of its own cards (a fixed draw per night): did the cards get stored?"""
+    rng = random.Random(seed)
+    scores = []
+    for night, cards in sorted(memory.by_night.items()):
+        for q, a in rng.sample(cards, min(RECALL_PER_NIGHT, len(cards))):
+            reply = memory.lm.chat([{"role": "user", "content": q}], max_new_tokens=24)
+            scores.append(locomo.f1_score(reply.text, a))
+    return {"n": len(scores), "f1": 100 * sum(scores) / len(scores)}
+
+
+def run(args) -> None:
+    conv = locomo.load(0)
+    with open(C4_STATE, "rb") as f:
+        state = pickle.load(f)
+    by_night = {n: night_cards(args.cards, n, state) for n in range(1, SESSIONS + 1)}
+    questions = [q for q in conv.questions if q.answerable_after(SESSIONS)]
+    speakers = tuple(sorted({s for sess in conv.sessions for s, _ in sess.turns}))[:2]
+    memory = ScreenSleep(LM(system=locomo_run.ANSWER_SYSTEM), args.seed, speakers, by_night, args.replay, args.hybrid_top_k)
+    for session in conv.sessions[:SESSIONS]:
+        memory.live_day(session)
+        memory.sleep()
+        print(f"night {memory.night}: {len(memory.by_night[memory.night])} cards, trained in {memory.train_s[-1]} s", flush=True)
+    recall = card_recall(memory)
+    if args.hybrid_top_k:
+        memory.attach_notes()
+    records = locomo_run.evaluate(memory, questions)
+    f1 = 100 * sum(r["f1"] for r in records) / len(records)
+    tokens = sum(r["prompt_tokens"] for r in records) / len(records)
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / f"{args.name}_seed{args.seed}.json").write_text(json.dumps({
+        "args": {k: str(v) for k, v in vars(args).items()}, "questions": len(records), "f1": f1, "prompt_tokens": tokens,
+        "card_recall": recall, "train_s": memory.train_s, "cards": sum(len(c) for c in by_night.values()), "records": records,
+    }, indent=1))
+    print(f"{args.name}: F1 {f1:.1f} over {len(records)} questions, {tokens:.0f} prompt tokens, card recall {recall['f1']:.1f}, "
+          f"training {sum(memory.train_s) / 60:.1f} min")
+
+
+def load(name: str) -> dict:
+    return json.loads((OUT / f"{name}_seed0.json").read_text()) if "_seed" not in name else json.loads((OUT / f"{name}.json").read_text())
+
+
+def compare(a: str, b: str) -> None:
+    first, second = load(a), load(b)
+    theirs = {r["question"]: r for r in second["records"]}
+    pairs = [(r["f1"], theirs[r["question"]]["f1"], r["category"]) for r in first["records"] if r["question"] in theirs]
+    diffs = [100 * (y - x) for x, y, _ in pairs]
+    mean = sum(diffs) / len(diffs)
+    se = (sum((d - mean) ** 2 for d in diffs) / (len(diffs) - 1)) ** 0.5 / len(diffs) ** 0.5
+    print(f"{b} - {a}: {mean:+.1f} F1 (+-{2 * se:.1f}, two standard errors) on {len(diffs)} paired questions; "
+          f"{a} {100 * sum(p[0] for p in pairs) / len(pairs):.1f}, {b} {100 * sum(p[1] for p in pairs) / len(pairs):.1f}")
+    by_cat = defaultdict(list)
+    for x, y, cat in pairs:
+        by_cat[locomo.CATEGORIES[cat]].append(100 * (y - x))
+    print("  " + "  ".join(f"{c} {sum(v) / len(v):+.1f} (n={len(v)})" for c, v in sorted(by_cat.items())))
+    print(f"  card recall {first['card_recall']['f1']:.1f} -> {second['card_recall']['f1']:.1f}; prompt tokens {first['prompt_tokens']:.0f} -> {second['prompt_tokens']:.0f}")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    sub = parser.add_subparsers(dest="command", required=True)
+    p = sub.add_parser("run")
+    p.add_argument("name")
+    p.add_argument("--cards", default="2b", help="extraction variant: a directory of cards_cache, or 2b for the cards of the C4 run")
+    p.add_argument("--replay", choices=["diluted", "full"], default="diluted", help="diluted: 24 random old cards per night; full: all of them")
+    p.add_argument("--hybrid-top-k", type=int, default=0, help="put the k closest cards in the prompt next to the adapter")
+    p.add_argument("--seed", type=int, default=0)
+    p = sub.add_parser("compare")
+    p.add_argument("a")
+    p.add_argument("b")
+    args = parser.parse_args()
+    run(args) if args.command == "run" else compare(args.a, args.b)
