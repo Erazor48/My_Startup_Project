@@ -121,8 +121,10 @@ def run(args) -> None:
     def save(label: str, records: list[dict], **extra) -> None:
         f1 = 100 * sum(r["f1"] for r in records) / len(records)
         tokens = sum(r["prompt_tokens"] for r in records) / len(records)
+        median = lambda key: sorted(r[key] for r in records)[len(records) // 2]  # noqa: E731
         (OUT / f"{label}_seed{args.seed}.json").write_text(json.dumps({
             "args": {k: str(v) for k, v in vars(args).items()}, "questions": len(records), "f1": f1, "prompt_tokens": tokens,
+            "median_prompt_tokens": median("prompt_tokens"), "median_prefill_s": median("prefill_s"),
             "card_recall": recall, "train_s": memory.train_s, "cards": cards_total, "records": records, **extra,
         }, indent=1))
         print(f"{label}: F1 {f1:.1f} over {len(records)} questions, {tokens:.0f} prompt tokens, card recall {recall['f1']:.1f}, "
