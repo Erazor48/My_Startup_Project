@@ -4,6 +4,7 @@
     uv run python screen.py run oracle --cards oracle_haiku            # one change: the cards
     uv run python screen.py run full_replay --replay full              # one change: the replay
     uv run python screen.py run hybrid_a --hybrid-top-k 2              # one change: top-2 cards in the prompt
+    uv run python screen.py rag --cards oracle_haiku --top-k 1 2 4     # control: same cards in a RAG, bare model, no training
     uv run python screen.py compare baseline oracle                    # paired F1 difference on the same questions
 
 Cards of an extraction variant live in cards_cache/<variant>/night_XX.json ([{q, a}]); the 2b variant is read
@@ -142,6 +143,34 @@ def run(args) -> None:
             save(f"{args.name}_ragref{args.rag_ref}", locomo_run.evaluate(memory, questions))
 
 
+def rag(args) -> None:
+    """Control for hybrid A: the cards of a variant in a RAG over the bare model (no adapter, no training)."""
+    conv = locomo.load(0)
+    with open(C4_STATE, "rb") as f:
+        state = pickle.load(f)
+    by_night = {n: night_cards(args.cards, n, state) for n in range(1, SESSIONS + 1)}
+    questions = [q for q in conv.questions if q.answerable_after(SESSIONS)]
+    speakers = tuple(sorted({s for sess in conv.sessions for s, _ in sess.turns}))[:2]
+    memory = ScreenSleep(LM(system=locomo_run.ANSWER_SYSTEM), args.seed, speakers, by_night, "diluted", 0)
+    for session in conv.sessions[:SESSIONS]:
+        memory.live_day(session)
+    memory.attach_notes()
+    OUT.mkdir(parents=True, exist_ok=True)
+    name = args.cards.removesuffix("_haiku")
+    for k in args.top_k:
+        memory.top_k = k
+        records = locomo_run.evaluate(memory, questions)
+        median = lambda key: sorted(r[key] for r in records)[len(records) // 2]  # noqa: E731
+        f1 = 100 * sum(r["f1"] for r in records) / len(records)
+        (OUT / f"{name}_ragref{k}_seed{args.seed}.json").write_text(json.dumps({
+            "args": {a: str(v) for a, v in vars(args).items()} | {"top_k": str(k)}, "questions": len(records), "f1": f1,
+            "prompt_tokens": sum(r["prompt_tokens"] for r in records) / len(records),
+            "median_prompt_tokens": median("prompt_tokens"), "median_prefill_s": median("prefill_s"),
+            "cards": sum(len(c) for c in by_night.values()), "records": records,
+        }, indent=1))
+        print(f"{name}_ragref{k}: F1 {f1:.1f} over {len(records)} questions, median {median('prompt_tokens')} tokens", flush=True)
+
+
 def load(name: str) -> dict:
     return json.loads((OUT / f"{name}_seed0.json").read_text()) if "_seed" not in name else json.loads((OUT / f"{name}.json").read_text())
 
@@ -153,13 +182,18 @@ def compare(a: str, b: str) -> None:
     diffs = [100 * (y - x) for x, y, _ in pairs]
     mean = sum(diffs) / len(diffs)
     se = (sum((d - mean) ** 2 for d in diffs) / (len(diffs) - 1)) ** 0.5 / len(diffs) ** 0.5
-    print(f"{b} - {a}: {mean:+.1f} F1 (+-{2 * se:.1f}, two standard errors) on {len(diffs)} paired questions; "
+    rng = random.Random(0)
+    boot = sorted(sum(rng.choices(diffs, k=len(diffs))) / len(diffs) for _ in range(10000))
+    low, high = boot[249], boot[9749]
+    print(f"{b} - {a}: {mean:+.1f} F1 (+-{2 * se:.1f}, two standard errors; paired bootstrap 95% [{low:+.1f}, {high:+.1f}]) on {len(diffs)} paired questions; "
           f"{a} {100 * sum(p[0] for p in pairs) / len(pairs):.1f}, {b} {100 * sum(p[1] for p in pairs) / len(pairs):.1f}")
     by_cat = defaultdict(list)
     for x, y, cat in pairs:
         by_cat[locomo.CATEGORIES[cat]].append(100 * (y - x))
-    print("  " + "  ".join(f"{c} {sum(v) / len(v):+.1f} (n={len(v)})" for c, v in sorted(by_cat.items())))
-    print(f"  card recall {first['card_recall']['f1']:.1f} -> {second['card_recall']['f1']:.1f}; prompt tokens {first['prompt_tokens']:.0f} -> {second['prompt_tokens']:.0f}")
+    se_of = lambda v: (sum((d - sum(v) / len(v)) ** 2 for d in v) / (len(v) - 1)) ** 0.5 / len(v) ** 0.5 if len(v) > 1 else float("nan")  # noqa: E731
+    print("  " + "  ".join(f"{c} {sum(v) / len(v):+.1f} (+-{se_of(v):.1f} se, n={len(v)})" for c, v in sorted(by_cat.items())))
+    recall = lambda d: f"{d['card_recall']['f1']:.1f}" if "card_recall" in d else "n/a (no adapter)"  # noqa: E731
+    print(f"  card recall {recall(first)} -> {recall(second)}; prompt tokens {first['prompt_tokens']:.0f} -> {second['prompt_tokens']:.0f}")
 
 
 if __name__ == "__main__":
@@ -172,8 +206,12 @@ if __name__ == "__main__":
     p.add_argument("--hybrid-top-k", type=int, default=0, help="hybrid A: also answer with the adapter and the k closest cards in the prompt")
     p.add_argument("--rag-ref", type=int, default=10, help="also answer with a RAG top-k over the same cards and no adapter (0: skip)")
     p.add_argument("--seed", type=int, default=0)
+    p = sub.add_parser("rag")
+    p.add_argument("--cards", default="oracle_haiku")
+    p.add_argument("--top-k", type=int, nargs="+", default=[1, 2, 4])
+    p.add_argument("--seed", type=int, default=0)
     p = sub.add_parser("compare")
     p.add_argument("a")
     p.add_argument("b")
     args = parser.parse_args()
-    run(args) if args.command == "run" else compare(args.a, args.b)
+    {"run": run, "rag": rag}[args.command](args) if args.command != "compare" else compare(args.a, args.b)
