@@ -1,0 +1,8 @@
+Hypnos
+Copyright 2026 Ethan Orain
+
+This product includes software developed by Ethan Orain, licensed under the Apache License, Version 2.0.
+
+Files derived from the LoCoMo dataset (experiments/001-sleep/cards_cache/, experiments/001-sleep/runs/locomo/,
+experiments/001-sleep/runs/screen/) are not covered by the Apache License: they stay under CC BY-NC 4.0, like LoCoMo
+(https://github.com/snap-research/locomo, Maharana et al., 2024).

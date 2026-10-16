@@ -1,0 +1,182 @@
+name: "Use case: memory for a small or local model"
+description: Tell us how you handle long-term memory today and what breaks. It helps decide what Hypnos builds next.
+title: "[use case] "
+labels: ["use-case"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking a few minutes. Every field except the first four is optional.
+
+        **This issue is public.** Do not paste confidential data, customer conversations, credentials or anything you
+        would not put on a public page. Rough numbers are fine. If you prefer to answer privately, say so in the last
+        field and leave a way to reach you.
+
+  - type: dropdown
+    id: role
+    attributes:
+      label: Who are you?
+      options:
+        - Indie game developer
+        - Game studio (more than 10 people)
+        - App or product developer (mobile, desktop, embedded)
+        - Researcher or student
+        - Hobbyist running local models
+        - Company building an AI assistant or agent
+        - Other (say which below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: product
+    attributes:
+      label: What are you building, and what should it remember?
+      description: One or two sentences. Example — "NPCs in a farming game that should remember what the player told them weeks ago."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: model-size
+    attributes:
+      label: Model size you run (or plan to run) at answer time
+      multiple: true
+      options:
+        - Under 1B parameters
+        - 1B to 4B
+        - 4B to 9B
+        - 9B to 35B
+        - Larger, or a hosted API model
+        - Not decided yet
+    validations:
+      required: true
+
+  - type: dropdown
+    id: hardware
+    attributes:
+      label: Where does the model run?
+      multiple: true
+      options:
+        - Phone or tablet
+        - Laptop or desktop CPU
+        - Consumer GPU
+        - Game console or handheld
+        - Embedded device or robot
+        - Own server
+        - Cloud API
+    validations:
+      required: true
+
+  - type: dropdown
+    id: current-memory
+    attributes:
+      label: How do you handle memory today?
+      multiple: true
+      options:
+        - No memory between sessions
+        - Full history in the prompt (truncated when too long)
+        - Rolling summary in the prompt
+        - RAG over past messages
+        - A memory library (Mem0, Letta, Zep, A-Mem or similar)
+        - Fine-tuning or LoRA on user data
+        - Custom solution (describe below)
+
+  - type: textarea
+    id: current-memory-details
+    attributes:
+      label: Details of your current memory setup
+      description: Library, retrieval method, how many items you retrieve, who writes the summaries or notes.
+
+  - type: dropdown
+    id: memory-tokens
+    attributes:
+      label: How many prompt tokens does memory take per message today?
+      description: Only the memory part, not the system prompt or the user's message. A rough guess is fine.
+      options:
+        - "0 (no memory)"
+        - Under 100
+        - 100 to 500
+        - 500 to 2,000
+        - 2,000 to 8,000
+        - More than 8,000
+        - I don't know
+
+  - type: textarea
+    id: what-breaks
+    attributes:
+      label: What breaks or costs too much?
+      description: Latency, RAM, cost per message, forgotten facts, contradictions, outdated facts, privacy, something else. A concrete example helps most.
+
+  - type: dropdown
+    id: volume
+    attributes:
+      label: Messages per user (or per character) per day
+      description: This matters because a nightly training step only pays off with enough questions per session.
+      options:
+        - Fewer than 10
+        - 10 to 100
+        - 100 to 1,000
+        - More than 1,000
+        - I don't know yet
+
+  - type: input
+    id: users
+    attributes:
+      label: Number of users or characters with their own memory (now, or expected in 12 months)
+      placeholder: "e.g. 40 NPCs per save file, 5,000 players"
+
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Constraints
+      options:
+        - label: Must run fully on the device, offline
+        - label: User data must not leave the device (privacy, GDPR, health data)
+        - label: Hard latency budget per answer (give it in the details below)
+        - label: Hard RAM or storage budget (give it below)
+        - label: Idle time is available for background work (overnight, while charging, between play sessions)
+        - label: Commercial product (a permissive license matters)
+
+  - type: textarea
+    id: constraints-details
+    attributes:
+      label: Constraint details
+      placeholder: "e.g. under 300 ms to first token on a Snapdragon 8 Gen 3, under 2 GB RAM for the model and its memory"
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Optional: price sensitivity
+
+        The open-source code stays free. Imagine a paid **hosted night service**: it writes the memory cards and trains
+        the adapter for your model every night, then sends the adapter back to run on the device. Give a monthly price
+        for your whole product (not per end user), in the currency of your choice. Skip this part if you prefer.
+
+  - type: input
+    id: price-too-cheap
+    attributes:
+      label: At what monthly price would it be so cheap that you would doubt its quality?
+      placeholder: "e.g. 5 EUR / month"
+
+  - type: input
+    id: price-bargain
+    attributes:
+      label: At what monthly price would it be a bargain, a great buy for the money?
+      placeholder: "e.g. 20 EUR / month"
+
+  - type: input
+    id: price-getting-expensive
+    attributes:
+      label: At what monthly price would it start to feel expensive, but still worth considering?
+      placeholder: "e.g. 60 EUR / month"
+
+  - type: input
+    id: price-too-expensive
+    attributes:
+      label: At what monthly price would it be too expensive to consider at all?
+      placeholder: "e.g. 150 EUR / month"
+
+  - type: textarea
+    id: contact
+    attributes:
+      label: Anything else? Would you try an early version?
+      description: If you are open to a short written exchange, say how to reach you (or that we can reply in this issue).
