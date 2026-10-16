@@ -1,4 +1,4 @@
-# My_Startup_Project
+# Hypnos
 
 Research notes and code for a question: can a small LLM keep learning from what it lives through
 by consolidating each day into its weights at night (a "sleep" phase), instead of re-reading its
