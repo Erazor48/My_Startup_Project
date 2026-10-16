@@ -381,7 +381,7 @@ def main() -> None:
     args.out.mkdir(parents=True, exist_ok=True)
     out = args.out / f"{name}.json"
     out.write_text(json.dumps({
-        "args": {**{k: str(v) if isinstance(v, Path) else v for k, v in vars(args).items()}, "n_sessions": last},
+        "args": {**{k: str(v.relative_to(HERE)) if isinstance(v, Path) and v.is_relative_to(HERE) else str(v) if isinstance(v, Path) else v for k, v in vars(args).items()}, "n_sessions": last},
         "sample_id": conv.sample_id, "nights": nights, "curve": curve, "records": curve[str(last)],
         "truncated": getattr(memory, "truncated", False),
         "cards": {k: v for k, v in getattr(memory, "cards", {}).items() if v},

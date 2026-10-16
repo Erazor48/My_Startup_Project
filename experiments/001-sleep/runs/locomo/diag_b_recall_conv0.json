@@ -1,0 +1,1695 @@
+{
+ "adapter": {
+  "cards": [
+   {
+    "night": 1,
+    "q": "What is Caroline planning to do?",
+    "gold": "Continue her education",
+    "answer": "Build her own family and put a roof over kids who haven't had that before.",
+    "f1": 0.125
+   },
+   {
+    "night": 1,
+    "q": "What kind of jobs are Caroline thinking of?",
+    "gold": "Anything that stands out",
+    "answer": "Anything that stands out",
+    "f1": 1.0
+   },
+   {
+    "night": 1,
+    "q": "What is Melanie swamped with?",
+    "gold": "Kids & work",
+    "answer": "Kids",
+    "f1": 0.6666666666666666
+   },
+   {
+    "night": 1,
+    "q": "What did Melanie say about the group?",
+    "gold": "Helpful group",
+    "answer": "It was awesome",
+    "f1": 0.0
+   },
+   {
+    "night": 1,
+    "q": "What does Melanie say Caroline will help?",
+    "gold": "People with similar issues",
+    "answer": "Build her own family",
+    "f1": 0.0
+   },
+   {
+    "night": 1,
+    "q": "What does Melanie say Caroline will do?",
+    "gold": "Help the people she works with",
+    "answer": "Build her own family and put a roof over kids who haven't had that before.",
+    "f1": 0.0
+   },
+   {
+    "night": 2,
+    "q": "When did Caroline start her hard work?",
+    "gold": "25 May 2023",
+    "answer": "22 October 2023",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 2,
+    "q": "What is Melanie's dream?",
+    "gold": "Having a family and giving a loving home to kids who need it",
+    "answer": "Create a safe and loving home for these kids",
+    "f1": 0.3529411764705882
+   },
+   {
+    "night": 2,
+    "q": "What did Caroline choose?",
+    "gold": "Adoption agencies",
+    "answer": "Adoption agencies",
+    "f1": 1.0
+   },
+   {
+    "night": 2,
+    "q": "What does Melanie say about Caroline's future family?",
+    "gold": "It's gonna be so lucky to have her",
+    "answer": "It brings home how much love's in families - both blood and the ones we choose.",
+    "f1": 0.09523809523809525
+   },
+   {
+    "night": 2,
+    "q": "Who is Caroline?",
+    "gold": "Single parent",
+    "answer": "Melanie",
+    "f1": 0.0
+   },
+   {
+    "night": 3,
+    "q": "When does Melanie feel alive and happy?",
+    "gold": "When she hangs with loved ones",
+    "answer": "22 October 2023",
+    "f1": 0.0
+   },
+   {
+    "night": 3,
+    "q": "What makes Melanie thankful?",
+    "gold": "Family",
+    "answer": "Family",
+    "f1": 1.0
+   },
+   {
+    "night": 3,
+    "q": "When did Melanie say this?",
+    "gold": "9 June 2023",
+    "answer": "22 October 2023",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 3,
+    "q": "Who supports Caroline?",
+    "gold": "Mel",
+    "answer": "Their encouragement made her who she is",
+    "f1": 0.0
+   },
+   {
+    "night": 3,
+    "q": "What did Mel say about sharing stories?",
+    "gold": "It's important to help promote understanding and acceptance",
+    "answer": "It's so freeing to just be yourself and share your true self",
+    "f1": 0.2222222222222222
+   },
+   {
+    "night": 4,
+    "q": "What was special about the time?",
+    "gold": "Having moments together as a family",
+    "answer": "It was a great time",
+    "f1": 0.0
+   },
+   {
+    "night": 4,
+    "q": "What did Melanie ask Caroline about?",
+    "gold": "Objects she treasures",
+    "answer": "How she's doing finding herself",
+    "f1": 0.25
+   },
+   {
+    "night": 4,
+    "q": "What did Melanie say about Caroline?",
+    "gold": "She said Caroline is making a big impact.",
+    "answer": "She is happy for her",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 4,
+    "q": "When did the grandma give the necklace to Caroline?",
+    "gold": "When Caroline was young",
+    "answer": "22 October 2023",
+    "f1": 0.0
+   },
+   {
+    "night": 4,
+    "q": "What did Melanie say about Caroline's dedication?",
+    "gold": "Inspiring",
+    "answer": "Amazing",
+    "f1": 0.0
+   },
+   {
+    "night": 5,
+    "q": "Why did Melanie try pottery?",
+    "gold": "Creativity and skill",
+    "answer": "It's calming",
+    "f1": 0.0
+   },
+   {
+    "night": 5,
+    "q": "What is Melanie going to do?",
+    "gold": "A transgender conference",
+    "answer": "An LGBTQ+ pride parade",
+    "f1": 0.0
+   },
+   {
+    "night": 5,
+    "q": "When is the transgender conference?",
+    "gold": "This month",
+    "answer": "Next month",
+    "f1": 0.5
+   },
+   {
+    "night": 5,
+    "q": "Why did Caroline want to help others?",
+    "gold": "Because she was motivated by the experience",
+    "answer": "Because she was motivated by the support of those close to her",
+    "f1": 0.5882352941176471
+   },
+   {
+    "night": 5,
+    "q": "What is the design of the bowl?",
+    "gold": "Black and white",
+    "answer": "Black and white",
+    "f1": 1.0
+   },
+   {
+    "night": 5,
+    "q": "What did Caroline say about the LGBTQ+ community?",
+    "gold": "It was great to see the love and support",
+    "answer": "It's awesome",
+    "f1": 0.22222222222222224
+   },
+   {
+    "night": 6,
+    "q": "When did Caroline last chat with Melanie?",
+    "gold": "6 July 2023",
+    "answer": "22 October 2023",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 6,
+    "q": "What did Melanie say about her favorite book?",
+    "gold": "Charlotte's Web.",
+    "answer": "Charlotte's Web",
+    "f1": 1.0
+   },
+   {
+    "night": 6,
+    "q": "Who is the listener?",
+    "gold": "Melanie",
+    "answer": "Melanie",
+    "f1": 1.0
+   },
+   {
+    "night": 6,
+    "q": "When did Melanie say this?",
+    "gold": "6 July 2023",
+    "answer": "22 October 2023",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 6,
+    "q": "When did Melanie take the kids to the museum?",
+    "gold": "5 July 2023",
+    "answer": "22 October 2023",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 7,
+    "q": "When did Melanie say this?",
+    "gold": "12 July 2023",
+    "answer": "22 October 2023",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 7,
+    "q": "What are the purple items for?",
+    "gold": "Running",
+    "answer": "To make a dream",
+    "f1": 0.0
+   },
+   {
+    "night": 7,
+    "q": "What did Melanie say about the lessons?",
+    "gold": "They are great",
+    "answer": "They were great",
+    "f1": 0.6666666666666666
+   },
+   {
+    "night": 7,
+    "q": "What did Melanie ask Caroline?",
+    "gold": "Which book has been her favorite guide?",
+    "answer": "Was connecting with those young folks meaningful for you?",
+    "f1": 0.0
+   },
+   {
+    "night": 7,
+    "q": "When did Melanie's mental health improve?",
+    "gold": "12 July 2023",
+    "answer": "22 October 2023",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 8,
+    "q": "Where did Caroline feel accepted?",
+    "gold": "Around people who accepted and celebrated her.",
+    "answer": "In her own true self",
+    "f1": 0.1818181818181818
+   },
+   {
+    "night": 8,
+    "q": "Who said \"It's definitely a top memory.\"?",
+    "gold": "Caroline",
+    "answer": "Melanie",
+    "f1": 0.0
+   },
+   {
+    "night": 8,
+    "q": "Who is Melanie?",
+    "gold": "A friend",
+    "answer": "Caroline",
+    "f1": 0.0
+   },
+   {
+    "night": 8,
+    "q": "What was the vibe like?",
+    "gold": "Amazing",
+    "answer": "Amazing",
+    "f1": 1.0
+   },
+   {
+    "night": 8,
+    "q": "What do flowers mean to Melanie?",
+    "gold": "They bring joy, represent growth, beauty, and remind her to appreciate small moments.",
+    "answer": "They bring joy and represent growth, beauty, and reminding her to appreciate small moments.",
+    "f1": 1.0
+   },
+   {
+    "night": 9,
+    "q": "What was the weather like?",
+    "gold": "Good",
+    "answer": "Clear sky",
+    "f1": 0.0
+   },
+   {
+    "night": 9,
+    "q": "When is the art show?",
+    "gold": "July 2023",
+    "answer": "Next month",
+    "f1": 0.0
+   },
+   {
+    "night": 9,
+    "q": "When did Melanie go camping?",
+    "gold": "Two weekends ago (17 July 2023)",
+    "answer": "22 October 2023",
+    "f1": 0.2222222222222222
+   },
+   {
+    "night": 9,
+    "q": "What did Caroline do last weekend?",
+    "gold": "Joined a mentorship program for LGBTQ youth",
+    "answer": "Joined a mentorship program for LGBTQ+ youth",
+    "f1": 1.0
+   },
+   {
+    "night": 9,
+    "q": "When did Melanie see Caroline's mentee?",
+    "gold": "17 July 2023",
+    "answer": "22 October 2023",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 9,
+    "q": "Where did Caroline paint?",
+    "gold": "At a LGBTQ center",
+    "answer": "An open-air studio",
+    "f1": 0.0
+   },
+   {
+    "night": 10,
+    "q": "Who did Caroline say hi to?",
+    "gold": "Melanie",
+    "answer": "Melanie",
+    "f1": 1.0
+   },
+   {
+    "night": 10,
+    "q": "What did Melanie say about feeling tiny?",
+    "gold": "She felt tiny and in awe of the universe",
+    "answer": "It's so freeing to just be yourself and feel tiny",
+    "f1": 0.125
+   },
+   {
+    "night": 10,
+    "q": "What did the sky look like?",
+    "gold": "Clear and filled with stars",
+    "answer": "Clear and filled with stars",
+    "f1": 1.0
+   },
+   {
+    "night": 10,
+    "q": "What do Melanie and her kids do at the beach?",
+    "gold": "Spend time together and chill",
+    "answer": "Relax",
+    "f1": 0.0
+   },
+   {
+    "night": 10,
+    "q": "When did Melanie say that?",
+    "gold": "20 July 2023",
+    "answer": "22 October 2023",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 11,
+    "q": "What does Art represent for Caroline?",
+    "gold": "Beauty found in imperfections",
+    "answer": "A way of being herself",
+    "f1": 0.0
+   },
+   {
+    "night": 11,
+    "q": "What is the main idea of Caroline's art?",
+    "gold": "Inclusivity and diversity",
+    "answer": "It's a way of expressing her true self",
+    "f1": 0.0
+   },
+   {
+    "night": 11,
+    "q": "How does Art help Caroline feel?",
+    "gold": "It's healing and connects her to who she is",
+    "answer": "It's healing and connects her to who she is",
+    "f1": 1.0
+   },
+   {
+    "night": 11,
+    "q": "What was the concert about?",
+    "gold": "Advocacy event",
+    "answer": "Music",
+    "f1": 0.0
+   },
+   {
+    "night": 11,
+    "q": "Who said \"It was so inspiring, Mel! Check out the crowd. People of all kinds celebrating love and acceptance - it really pushed me to keep fighting for LGBTQ rights.\"",
+    "gold": "Caroline",
+    "answer": "Caroline",
+    "f1": 1.0
+   },
+   {
+    "night": 12,
+    "q": "When is the next family outing?",
+    "gold": "This summer",
+    "answer": "Next month",
+    "f1": 0.0
+   },
+   {
+    "night": 12,
+    "q": "What does Melanie like about the bowl?",
+    "gold": "The colors and patterns",
+    "answer": "It's awesome",
+    "f1": 0.0
+   },
+   {
+    "night": 12,
+    "q": "What does Melanie say painting helps her do?",
+    "gold": "Express feelings and be creative",
+    "answer": "Express feelings and be authentic",
+    "f1": 0.75
+   },
+   {
+    "night": 12,
+    "q": "What did Melanie say about the pottery project?",
+    "gold": "Pretty proud of it!",
+    "answer": "It's awesome",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 12,
+    "q": "When did Caroline and Mel have a blast?",
+    "gold": "Last year (2022)",
+    "answer": "22 October 2023",
+    "f1": 0.0
+   },
+   {
+    "night": 13,
+    "q": "How did Caroline feel while painting?",
+    "gold": "Powerful",
+    "answer": "At one with herself",
+    "f1": 0.0
+   },
+   {
+    "night": 13,
+    "q": "What is Melanie's partner's name?",
+    "gold": "Mel",
+    "answer": "Melanie",
+    "f1": 0.0
+   },
+   {
+    "night": 13,
+    "q": "When did Melanie say \"Bye Caroline\"?",
+    "gold": "23 August 2023",
+    "answer": "20 July 2023",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 13,
+    "q": "What did Caroline like about the painting?",
+    "gold": "Details and grace",
+    "answer": "It's awesome",
+    "f1": 0.0
+   },
+   {
+    "night": 13,
+    "q": "What did Caroline do that felt liberated and empowered?",
+    "gold": "Painting",
+    "answer": "Painting",
+    "f1": 1.0
+   },
+   {
+    "night": 13,
+    "q": "What does painting help Caroline do?",
+    "gold": "Explore her identity and be true to herself",
+    "answer": "Express feelings and explore identity",
+    "f1": 0.36363636363636365
+   },
+   {
+    "night": 14,
+    "q": "What did Caroline just finish?",
+    "gold": "A painting",
+    "answer": "An adoption agency",
+    "f1": 0.0
+   },
+   {
+    "night": 14,
+    "q": "What does the mural reflect?",
+    "gold": "The courage and strength of the trans community",
+    "answer": "The true self",
+    "f1": 0.0
+   },
+   {
+    "night": 14,
+    "q": "When did Melanie say art gives joy?",
+    "gold": "25 August 2023",
+    "answer": "22 October 2023",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 14,
+    "q": "What does the eagle symbolize?",
+    "gold": "Freedom and pride",
+    "answer": "Freedom and being yourself",
+    "f1": 0.4
+   },
+   {
+    "night": 14,
+    "q": "What does the LGBTQ community need?",
+    "gold": "More platforms",
+    "answer": "More platforms",
+    "f1": 1.0
+   },
+   {
+    "night": 15,
+    "q": "How did Caroline feel about the experience?",
+    "gold": "It was so special to her.",
+    "answer": "It was awesome",
+    "f1": 0.4444444444444444
+   },
+   {
+    "night": 15,
+    "q": "What instrument does Melanie play?",
+    "gold": "Clarinet",
+    "answer": "Clarinet",
+    "f1": 1.0
+   },
+   {
+    "night": 15,
+    "q": "What song did Melanie play?",
+    "gold": "Summer Sounds",
+    "answer": "Summer Sounds",
+    "f1": 1.0
+   },
+   {
+    "night": 15,
+    "q": "Who did Caroline thank?",
+    "gold": "Melanie",
+    "answer": "Melanie",
+    "f1": 1.0
+   },
+   {
+    "night": 15,
+    "q": "Where is Caroline volunteering?",
+    "gold": "Youth center",
+    "answer": "A homeless shelter",
+    "f1": 0.0
+   },
+   {
+    "night": 16,
+    "q": "What did Caroline say?",
+    "gold": "Phew! Glad it all worked out and you had a good time at the park!",
+    "answer": "Glad you had support. Being yourself",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 16,
+    "q": "What does the mix of colors mean?",
+    "gold": "Smashing that rigid thinking",
+    "answer": "It stands for freedom and being yourself",
+    "f1": 0.0
+   },
+   {
+    "night": 16,
+    "q": "What did Melanie say about the painting?",
+    "gold": "Awesome",
+    "answer": "It's special to her",
+    "f1": 0.0
+   },
+   {
+    "night": 16,
+    "q": "What does the red and blue represent?",
+    "gold": "Binary gender system",
+    "answer": "Love and acceptance",
+    "f1": 0.0
+   },
+   {
+    "night": 16,
+    "q": "When did Caroline start creating art?",
+    "gold": "13 September 2023",
+    "answer": "22 October 2023",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 17,
+    "q": "When did the event take place?",
+    "gold": "13 October 2023",
+    "answer": "22 October 2023",
+    "f1": 0.6666666666666666
+   },
+   {
+    "night": 17,
+    "q": "Who adopted last year?",
+    "gold": "A buddy of Melanie's",
+    "answer": "A buddy",
+    "f1": 0.5
+   },
+   {
+    "night": 17,
+    "q": "What is the topic of conversation?",
+    "gold": "Learning and exploring",
+    "answer": "Life's too short to do anything else",
+    "f1": 0.0
+   },
+   {
+    "night": 17,
+    "q": "What was the event described by Caroline?",
+    "gold": "A transgender poetry reading",
+    "answer": "A transgender poetry reading",
+    "f1": 1.0
+   },
+   {
+    "night": 17,
+    "q": "What other painting did Melanie do?",
+    "gold": "An abstract painting",
+    "answer": "An abstract painting",
+    "f1": 1.0
+   },
+   {
+    "night": 17,
+    "q": "What is the best thing ever?",
+    "gold": "Showing off our true selves",
+    "answer": "Showing off who we really are",
+    "f1": 0.3636363636363636
+   },
+   {
+    "night": 18,
+    "q": "What do kids have an amazing ability to do?",
+    "gold": "Bounce back",
+    "answer": "Bounce back",
+    "f1": 1.0
+   },
+   {
+    "night": 18,
+    "q": "Who is Melanie's biggest motivation?",
+    "gold": "Their loved ones",
+    "answer": "Their love and support",
+    "f1": 0.6666666666666666
+   },
+   {
+    "night": 18,
+    "q": "What happened to the kids?",
+    "gold": "They had an accident",
+    "answer": "They got into an accident",
+    "f1": 0.5714285714285715
+   },
+   {
+    "night": 18,
+    "q": "How did the kids handle the accident?",
+    "gold": "They were scared but reassured and explained their brother would be OK",
+    "answer": "They were scared but reassured and explained their love for their family",
+    "f1": 0.6363636363636364
+   },
+   {
+    "night": 18,
+    "q": "What did Melanie say about the trip?",
+    "gold": "It was insane",
+    "answer": "It was insane",
+    "f1": 1.0
+   },
+   {
+    "night": 19,
+    "q": "When did Melanie say \"Absolutely! I'm so glad we can always be there for each other\"?",
+    "gold": "October 22, 2023",
+    "answer": "October 22, 2023",
+    "f1": 1.0
+   },
+   {
+    "night": 19,
+    "q": "What did Caroline say?",
+    "gold": "Glad you agree, Caroline. Appreciate the support of those close to me. Their encouragement made me who I am.",
+    "answer": "Glad you had support. Being yourself",
+    "f1": 0.25
+   },
+   {
+    "night": 19,
+    "q": "What does Melanie agree with?",
+    "gold": "Caroline's dream",
+    "answer": "Caroline's dream",
+    "f1": 1.0
+   },
+   {
+    "night": 19,
+    "q": "What did Melanie say Caroline found out?",
+    "gold": "Who she really is",
+    "answer": "Who she really is",
+    "f1": 1.0
+   },
+   {
+    "night": 19,
+    "q": "What is Caroline's vision for the future?",
+    "gold": "Having a family",
+    "answer": "Having a family",
+    "f1": 1.0
+   }
+  ],
+  "paraphrases": [
+   {
+    "night": 1,
+    "q": "On what date did Caroline attend the LGBTQ support group?",
+    "gold": "7 May 2023",
+    "answer": "22 October 2023",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 2,
+    "q": "What made Caroline pick that adoption agency?",
+    "gold": "Because they help LGBTQ+ folks with adoption",
+    "answer": "It was a safe and loving home for these kids",
+    "f1": 0.0
+   },
+   {
+    "night": 2,
+    "q": "How does Melanie look after herself?",
+    "gold": "Running, reading, playing violin",
+    "answer": "Great",
+    "f1": 0.0
+   },
+   {
+    "night": 2,
+    "q": "What was the race raising awareness for?",
+    "gold": "Mental health",
+    "answer": "Transgender youth",
+    "f1": 0.0
+   },
+   {
+    "night": 3,
+    "q": "Who supports Caroline?",
+    "gold": "Her friends, family and mentors",
+    "answer": "Their encouragement made her who she is",
+    "f1": 0.18181818181818182
+   },
+   {
+    "night": 4,
+    "q": "Why is she changing careers?",
+    "gold": "To help people with similar experiences",
+    "answer": "To help people who haven't had that before",
+    "f1": 0.42857142857142855
+   },
+   {
+    "night": 5,
+    "q": "What does the bowl look like?",
+    "gold": "Black and white",
+    "answer": "Amazing",
+    "f1": 0.0
+   },
+   {
+    "night": 5,
+    "q": "What made Melanie take up pottery?",
+    "gold": "Creativity and skill",
+    "answer": "It was calming",
+    "f1": 0.0
+   },
+   {
+    "night": 7,
+    "q": "On what date did Melanie begin running longer distances?",
+    "gold": "12 July 2023",
+    "answer": "22 October 2023",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 9,
+    "q": "What month is the art show in?",
+    "gold": "July 2023",
+    "answer": "Next month",
+    "f1": 0.0
+   },
+   {
+    "night": 10,
+    "q": "In which place was the pride parade held?",
+    "gold": "In the city",
+    "answer": "In the city",
+    "f1": 1.0
+   },
+   {
+    "night": 11,
+    "q": "What is the painting called?",
+    "gold": "Embracing Identity",
+    "answer": "An abstract painting",
+    "f1": 0.0
+   },
+   {
+    "night": 11,
+    "q": "What does Caroline's art express?",
+    "gold": "Expressing her trans experience",
+    "answer": "Her true self",
+    "f1": 0.28571428571428575
+   },
+   {
+    "night": 13,
+    "q": "What did painting feel like for Caroline?",
+    "gold": "Liberated and empowered",
+    "answer": "A way of being herself",
+    "f1": 0.0
+   },
+   {
+    "night": 15,
+    "q": "What is the theme of the song?",
+    "gold": "Courage and fighting for what's right",
+    "answer": "Courage and fighting for what's right",
+    "f1": 1.0
+   },
+   {
+    "night": 16,
+    "q": "Which colors were in the painting?",
+    "gold": "Red and blue",
+    "answer": "Red and blue",
+    "f1": 1.0
+   },
+   {
+    "night": 16,
+    "q": "Which kinds of art does Melanie like?",
+    "gold": "Painting and pottery",
+    "answer": "Painting and pottery",
+    "f1": 1.0
+   },
+   {
+    "night": 17,
+    "q": "On what date did Melanie get in touch with her mentor?",
+    "gold": "13 October 2023",
+    "answer": "22 October 2023",
+    "f1": 0.6666666666666666
+   },
+   {
+    "night": 18,
+    "q": "On what date was Melanie's family at the Grand Canyon?",
+    "gold": "20 October 2023",
+    "answer": "20 July 2023",
+    "f1": 0.6666666666666666
+   },
+   {
+    "night": 19,
+    "q": "On what date did Caroline discover her true self?",
+    "gold": "22 October 2023",
+    "answer": "22 October 2023",
+    "f1": 1.0
+   }
+  ]
+ },
+ "base": {
+  "cards": [
+   {
+    "night": 1,
+    "q": "What is Caroline planning to do?",
+    "gold": "Continue her education",
+    "answer": "Caroline is planning to visit her sister.",
+    "f1": 0.2
+   },
+   {
+    "night": 1,
+    "q": "What kind of jobs are Caroline thinking of?",
+    "gold": "Anything that stands out",
+    "answer": "Teaching",
+    "f1": 0.0
+   },
+   {
+    "night": 1,
+    "q": "What is Melanie swamped with?",
+    "gold": "Kids & work",
+    "answer": "Melanie is swamped with work.",
+    "f1": 0.28571428571428575
+   },
+   {
+    "night": 1,
+    "q": "What did Melanie say about the group?",
+    "gold": "Helpful group",
+    "answer": "She said they were a \"great group.\"",
+    "f1": 0.25
+   },
+   {
+    "night": 1,
+    "q": "What does Melanie say Caroline will help?",
+    "gold": "People with similar issues",
+    "answer": "Caroline will help Melanie.",
+    "f1": 0.0
+   },
+   {
+    "night": 1,
+    "q": "What does Melanie say Caroline will do?",
+    "gold": "Help the people she works with",
+    "answer": "Caroline will leave.",
+    "f1": 0.0
+   },
+   {
+    "night": 2,
+    "q": "When did Caroline start her hard work?",
+    "gold": "25 May 2023",
+    "answer": "1990",
+    "f1": 0.0
+   },
+   {
+    "night": 2,
+    "q": "What is Melanie's dream?",
+    "gold": "Having a family and giving a loving home to kids who need it",
+    "answer": "To build a better world.",
+    "f1": 0.14285714285714288
+   },
+   {
+    "night": 2,
+    "q": "What did Caroline choose?",
+    "gold": "Adoption agencies",
+    "answer": "Caroline chose the path of the artist.",
+    "f1": 0.0
+   },
+   {
+    "night": 2,
+    "q": "What does Melanie say about Caroline's future family?",
+    "gold": "It's gonna be so lucky to have her",
+    "answer": "Melanie says Caroline's future family will be full of love.",
+    "f1": 0.11111111111111112
+   },
+   {
+    "night": 2,
+    "q": "Who is Caroline?",
+    "gold": "Single parent",
+    "answer": "Caroline is a character from the story \"The Secret Garden\" by Frances Hodgson Burnett.",
+    "f1": 0.0
+   },
+   {
+    "night": 3,
+    "q": "When does Melanie feel alive and happy?",
+    "gold": "When she hangs with loved ones",
+    "answer": "When she's with her friends.",
+    "f1": 0.5454545454545454
+   },
+   {
+    "night": 3,
+    "q": "What makes Melanie thankful?",
+    "gold": "Family",
+    "answer": "Her own resilience.",
+    "f1": 0.0
+   },
+   {
+    "night": 3,
+    "q": "When did Melanie say this?",
+    "gold": "9 June 2023",
+    "answer": "I don't have access to past conversations.",
+    "f1": 0.0
+   },
+   {
+    "night": 3,
+    "q": "Who supports Caroline?",
+    "gold": "Mel",
+    "answer": "Caroline's family",
+    "f1": 0.0
+   },
+   {
+    "night": 3,
+    "q": "What did Mel say about sharing stories?",
+    "gold": "It's important to help promote understanding and acceptance",
+    "answer": "Mel said stories are best shared when you listen.",
+    "f1": 0.0
+   },
+   {
+    "night": 4,
+    "q": "What was special about the time?",
+    "gold": "Having moments together as a family",
+    "answer": "The time was special because it was the last one.",
+    "f1": 0.0
+   },
+   {
+    "night": 4,
+    "q": "What did Melanie ask Caroline about?",
+    "gold": "Objects she treasures",
+    "answer": "Melanie asked about Caroline's plans.",
+    "f1": 0.0
+   },
+   {
+    "night": 4,
+    "q": "What did Melanie say about Caroline?",
+    "gold": "She said Caroline is making a big impact.",
+    "answer": "Melanie said Caroline was a \"good girl.\"",
+    "f1": 0.30769230769230765
+   },
+   {
+    "night": 4,
+    "q": "When did the grandma give the necklace to Caroline?",
+    "gold": "When Caroline was young",
+    "answer": "Never",
+    "f1": 0.0
+   },
+   {
+    "night": 4,
+    "q": "What did Melanie say about Caroline's dedication?",
+    "gold": "Inspiring",
+    "answer": "She praised her.",
+    "f1": 0.0
+   },
+   {
+    "night": 5,
+    "q": "Why did Melanie try pottery?",
+    "gold": "Creativity and skill",
+    "answer": "To find out, I need to check our past conversation history.",
+    "f1": 0.0
+   },
+   {
+    "night": 5,
+    "q": "What is Melanie going to do?",
+    "gold": "A transgender conference",
+    "answer": "Melanie is going to the park.",
+    "f1": 0.0
+   },
+   {
+    "night": 5,
+    "q": "When is the transgender conference?",
+    "gold": "This month",
+    "answer": "Unknown",
+    "f1": 0.0
+   },
+   {
+    "night": 5,
+    "q": "Why did Caroline want to help others?",
+    "gold": "Because she was motivated by the experience",
+    "answer": "To help others.",
+    "f1": 0.0
+   },
+   {
+    "night": 5,
+    "q": "What is the design of the bowl?",
+    "gold": "Black and white",
+    "answer": "Glass",
+    "f1": 0.0
+   },
+   {
+    "night": 5,
+    "q": "What did Caroline say about the LGBTQ+ community?",
+    "gold": "It was great to see the love and support",
+    "answer": "She said it was a community of love and acceptance.",
+    "f1": 0.39999999999999997
+   },
+   {
+    "night": 6,
+    "q": "When did Caroline last chat with Melanie?",
+    "gold": "6 July 2023",
+    "answer": "Last week",
+    "f1": 0.0
+   },
+   {
+    "night": 6,
+    "q": "What did Melanie say about her favorite book?",
+    "gold": "Charlotte's Web.",
+    "answer": "She said it was \"The Great Gatsby.\"",
+    "f1": 0.0
+   },
+   {
+    "night": 6,
+    "q": "Who is the listener?",
+    "gold": "Melanie",
+    "answer": "The user",
+    "f1": 0.0
+   },
+   {
+    "night": 6,
+    "q": "When did Melanie say this?",
+    "gold": "6 July 2023",
+    "answer": "I don't have access to past conversations.",
+    "f1": 0.0
+   },
+   {
+    "night": 6,
+    "q": "When did Melanie take the kids to the museum?",
+    "gold": "5 July 2023",
+    "answer": "Last Sunday",
+    "f1": 0.0
+   },
+   {
+    "night": 7,
+    "q": "When did Melanie say this?",
+    "gold": "12 July 2023",
+    "answer": "I don't have access to past conversations.",
+    "f1": 0.0
+   },
+   {
+    "night": 7,
+    "q": "What are the purple items for?",
+    "gold": "Running",
+    "answer": "To be used",
+    "f1": 0.0
+   },
+   {
+    "night": 7,
+    "q": "What did Melanie say about the lessons?",
+    "gold": "They are great",
+    "answer": "She said they were too simple.",
+    "f1": 0.2222222222222222
+   },
+   {
+    "night": 7,
+    "q": "What did Melanie ask Caroline?",
+    "gold": "Which book has been her favorite guide?",
+    "answer": "She asked about the weather.",
+    "f1": 0.0
+   },
+   {
+    "night": 7,
+    "q": "When did Melanie's mental health improve?",
+    "gold": "12 July 2023",
+    "answer": "Never",
+    "f1": 0.0
+   },
+   {
+    "night": 8,
+    "q": "Where did Caroline feel accepted?",
+    "gold": "Around people who accepted and celebrated her.",
+    "answer": "At the party",
+    "f1": 0.0
+   },
+   {
+    "night": 8,
+    "q": "Who said \"It's definitely a top memory.\"?",
+    "gold": "Caroline",
+    "answer": "Unknown",
+    "f1": 0.0
+   },
+   {
+    "night": 8,
+    "q": "Who is Melanie?",
+    "gold": "A friend",
+    "answer": "Melanie is a character from the TV show \"The Good Place.\"",
+    "f1": 0.0
+   },
+   {
+    "night": 8,
+    "q": "What was the vibe like?",
+    "gold": "Amazing",
+    "answer": "Nostalgic and warm",
+    "f1": 0.0
+   },
+   {
+    "night": 8,
+    "q": "What do flowers mean to Melanie?",
+    "gold": "They bring joy, represent growth, beauty, and remind her to appreciate small moments.",
+    "answer": "Love and hope",
+    "f1": 0.0
+   },
+   {
+    "night": 9,
+    "q": "What was the weather like?",
+    "gold": "Good",
+    "answer": "Rainy",
+    "f1": 0.0
+   },
+   {
+    "night": 9,
+    "q": "When is the art show?",
+    "gold": "July 2023",
+    "answer": "Unknown",
+    "f1": 0.0
+   },
+   {
+    "night": 9,
+    "q": "When did Melanie go camping?",
+    "gold": "Two weekends ago (17 July 2023)",
+    "answer": "Last summer",
+    "f1": 0.0
+   },
+   {
+    "night": 9,
+    "q": "What did Caroline do last weekend?",
+    "gold": "Joined a mentorship program for LGBTQ youth",
+    "answer": "Nothing.",
+    "f1": 0.0
+   },
+   {
+    "night": 9,
+    "q": "When did Melanie see Caroline's mentee?",
+    "gold": "17 July 2023",
+    "answer": "Never",
+    "f1": 0.0
+   },
+   {
+    "night": 9,
+    "q": "Where did Caroline paint?",
+    "gold": "At a LGBTQ center",
+    "answer": "London",
+    "f1": 0.0
+   },
+   {
+    "night": 10,
+    "q": "Who did Caroline say hi to?",
+    "gold": "Melanie",
+    "answer": "Caroline said hi to her mom.",
+    "f1": 0.0
+   },
+   {
+    "night": 10,
+    "q": "What did Melanie say about feeling tiny?",
+    "gold": "She felt tiny and in awe of the universe",
+    "answer": "She said she felt tiny.",
+    "f1": 0.5
+   },
+   {
+    "night": 10,
+    "q": "What did the sky look like?",
+    "gold": "Clear and filled with stars",
+    "answer": "Blue",
+    "f1": 0.0
+   },
+   {
+    "night": 10,
+    "q": "What do Melanie and her kids do at the beach?",
+    "gold": "Spend time together and chill",
+    "answer": "Play",
+    "f1": 0.0
+   },
+   {
+    "night": 10,
+    "q": "When did Melanie say that?",
+    "gold": "20 July 2023",
+    "answer": "Never",
+    "f1": 0.0
+   },
+   {
+    "night": 11,
+    "q": "What does Art represent for Caroline?",
+    "gold": "Beauty found in imperfections",
+    "answer": "Art",
+    "f1": 0.0
+   },
+   {
+    "night": 11,
+    "q": "What is the main idea of Caroline's art?",
+    "gold": "Inclusivity and diversity",
+    "answer": "Her art explores the human condition through vibrant, expressive imagery.",
+    "f1": 0.0
+   },
+   {
+    "night": 11,
+    "q": "How does Art help Caroline feel?",
+    "gold": "It's healing and connects her to who she is",
+    "answer": "Comfort and hope.",
+    "f1": 0.0
+   },
+   {
+    "night": 11,
+    "q": "What was the concert about?",
+    "gold": "Advocacy event",
+    "answer": "The concert was about the band's new album.",
+    "f1": 0.0
+   },
+   {
+    "night": 11,
+    "q": "Who said \"It was so inspiring, Mel! Check out the crowd. People of all kinds celebrating love and acceptance - it really pushed me to keep fighting for LGBTQ rights.\"",
+    "gold": "Caroline",
+    "answer": "Mel",
+    "f1": 0.0
+   },
+   {
+    "night": 12,
+    "q": "When is the next family outing?",
+    "gold": "This summer",
+    "answer": "Unknown",
+    "f1": 0.0
+   },
+   {
+    "night": 12,
+    "q": "What does Melanie like about the bowl?",
+    "gold": "The colors and patterns",
+    "answer": "Melanie likes the bowl's shape.",
+    "f1": 0.0
+   },
+   {
+    "night": 12,
+    "q": "What does Melanie say painting helps her do?",
+    "gold": "Express feelings and be creative",
+    "answer": "paints",
+    "f1": 0.0
+   },
+   {
+    "night": 12,
+    "q": "What did Melanie say about the pottery project?",
+    "gold": "Pretty proud of it!",
+    "answer": "Melanie said the pottery project was a great idea.",
+    "f1": 0.0
+   },
+   {
+    "night": 12,
+    "q": "When did Caroline and Mel have a blast?",
+    "gold": "Last year (2022)",
+    "answer": "Last night",
+    "f1": 0.4
+   },
+   {
+    "night": 13,
+    "q": "How did Caroline feel while painting?",
+    "gold": "Powerful",
+    "answer": "Joyful",
+    "f1": 0.0
+   },
+   {
+    "night": 13,
+    "q": "What is Melanie's partner's name?",
+    "gold": "Mel",
+    "answer": "Unknown",
+    "f1": 0.0
+   },
+   {
+    "night": 13,
+    "q": "When did Melanie say \"Bye Caroline\"?",
+    "gold": "23 August 2023",
+    "answer": "Never",
+    "f1": 0.0
+   },
+   {
+    "night": 13,
+    "q": "What did Caroline like about the painting?",
+    "gold": "Details and grace",
+    "answer": "She liked the colors.",
+    "f1": 0.0
+   },
+   {
+    "night": 13,
+    "q": "What did Caroline do that felt liberated and empowered?",
+    "gold": "Painting",
+    "answer": "She started her own business.",
+    "f1": 0.0
+   },
+   {
+    "night": 13,
+    "q": "What does painting help Caroline do?",
+    "gold": "Explore her identity and be true to herself",
+    "answer": "Helps her express emotions.",
+    "f1": 0.18181818181818182
+   },
+   {
+    "night": 14,
+    "q": "What did Caroline just finish?",
+    "gold": "A painting",
+    "answer": "Caroline finished her homework.",
+    "f1": 0.0
+   },
+   {
+    "night": 14,
+    "q": "What does the mural reflect?",
+    "gold": "The courage and strength of the trans community",
+    "answer": "The mural reflects the community's history and shared values.",
+    "f1": 0.1818181818181818
+   },
+   {
+    "night": 14,
+    "q": "When did Melanie say art gives joy?",
+    "gold": "25 August 2023",
+    "answer": "Never",
+    "f1": 0.0
+   },
+   {
+    "night": 14,
+    "q": "What does the eagle symbolize?",
+    "gold": "Freedom and pride",
+    "answer": "Freedom, strength, and vision.",
+    "f1": 0.4
+   },
+   {
+    "night": 14,
+    "q": "What does the LGBTQ community need?",
+    "gold": "More platforms",
+    "answer": "Love, safety, and respect.",
+    "f1": 0.0
+   },
+   {
+    "night": 15,
+    "q": "How did Caroline feel about the experience?",
+    "gold": "It was so special to her.",
+    "answer": "She felt overwhelmed.",
+    "f1": 0.0
+   },
+   {
+    "night": 15,
+    "q": "What instrument does Melanie play?",
+    "gold": "Clarinet",
+    "answer": "Guitar",
+    "f1": 0.0
+   },
+   {
+    "night": 15,
+    "q": "What song did Melanie play?",
+    "gold": "Summer Sounds",
+    "answer": "I don't know.",
+    "f1": 0.0
+   },
+   {
+    "night": 15,
+    "q": "Who did Caroline thank?",
+    "gold": "Melanie",
+    "answer": "Caroline thanked her mother.",
+    "f1": 0.0
+   },
+   {
+    "night": 15,
+    "q": "Where is Caroline volunteering?",
+    "gold": "Youth center",
+    "answer": "Unknown",
+    "f1": 0.0
+   },
+   {
+    "night": 16,
+    "q": "What did Caroline say?",
+    "gold": "Phew! Glad it all worked out and you had a good time at the park!",
+    "answer": "She said nothing.",
+    "f1": 0.0
+   },
+   {
+    "night": 16,
+    "q": "What does the mix of colors mean?",
+    "gold": "Smashing that rigid thinking",
+    "answer": "No context provided.",
+    "f1": 0.0
+   },
+   {
+    "night": 16,
+    "q": "What did Melanie say about the painting?",
+    "gold": "Awesome",
+    "answer": "She said it was beautiful.",
+    "f1": 0.0
+   },
+   {
+    "night": 16,
+    "q": "What does the red and blue represent?",
+    "gold": "Binary gender system",
+    "answer": "Red and blue represent opposing forces or contrasting ideas.",
+    "f1": 0.0
+   },
+   {
+    "night": 16,
+    "q": "When did Caroline start creating art?",
+    "gold": "13 September 2023",
+    "answer": "1990",
+    "f1": 0.0
+   },
+   {
+    "night": 17,
+    "q": "When did the event take place?",
+    "gold": "13 October 2023",
+    "answer": "Unknown",
+    "f1": 0.0
+   },
+   {
+    "night": 17,
+    "q": "Who adopted last year?",
+    "gold": "A buddy of Melanie's",
+    "answer": "Unknown",
+    "f1": 0.0
+   },
+   {
+    "night": 17,
+    "q": "What is the topic of conversation?",
+    "gold": "Learning and exploring",
+    "answer": "Past conversations",
+    "f1": 0.0
+   },
+   {
+    "night": 17,
+    "q": "What was the event described by Caroline?",
+    "gold": "A transgender poetry reading",
+    "answer": "The Great Fire of London",
+    "f1": 0.0
+   },
+   {
+    "night": 17,
+    "q": "What other painting did Melanie do?",
+    "gold": "An abstract painting",
+    "answer": "She did a lot of watercolors.",
+    "f1": 0.0
+   },
+   {
+    "night": 17,
+    "q": "What is the best thing ever?",
+    "gold": "Showing off our true selves",
+    "answer": "Love.",
+    "f1": 0.0
+   },
+   {
+    "night": 18,
+    "q": "What do kids have an amazing ability to do?",
+    "gold": "Bounce back",
+    "answer": "Imagination",
+    "f1": 0.0
+   },
+   {
+    "night": 18,
+    "q": "Who is Melanie's biggest motivation?",
+    "gold": "Their loved ones",
+    "answer": "To save her family.",
+    "f1": 0.0
+   },
+   {
+    "night": 18,
+    "q": "What happened to the kids?",
+    "gold": "They had an accident",
+    "answer": "They are safe.",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 18,
+    "q": "How did the kids handle the accident?",
+    "gold": "They were scared but reassured and explained their brother would be OK",
+    "answer": "They handled it well.",
+    "f1": 0.13333333333333333
+   },
+   {
+    "night": 18,
+    "q": "What did Melanie say about the trip?",
+    "gold": "It was insane",
+    "answer": "Melanie said the trip was amazing.",
+    "f1": 0.25
+   },
+   {
+    "night": 19,
+    "q": "When did Melanie say \"Absolutely! I'm so glad we can always be there for each other\"?",
+    "gold": "October 22, 2023",
+    "answer": "Never",
+    "f1": 0.0
+   },
+   {
+    "night": 19,
+    "q": "What did Caroline say?",
+    "gold": "Glad you agree, Caroline. Appreciate the support of those close to me. Their encouragement made me who I am.",
+    "answer": "She said nothing.",
+    "f1": 0.0
+   },
+   {
+    "night": 19,
+    "q": "What does Melanie agree with?",
+    "gold": "Caroline's dream",
+    "answer": "Melanie agrees with her own ideas.",
+    "f1": 0.0
+   },
+   {
+    "night": 19,
+    "q": "What did Melanie say Caroline found out?",
+    "gold": "Who she really is",
+    "answer": "Melanie said Caroline found out about the affair.",
+    "f1": 0.0
+   },
+   {
+    "night": 19,
+    "q": "What is Caroline's vision for the future?",
+    "gold": "Having a family",
+    "answer": "Caroline wants to build a better world.",
+    "f1": 0.0
+   }
+  ],
+  "paraphrases": [
+   {
+    "night": 1,
+    "q": "On what date did Caroline attend the LGBTQ support group?",
+    "gold": "7 May 2023",
+    "answer": "Unknown",
+    "f1": 0.0
+   },
+   {
+    "night": 2,
+    "q": "What made Caroline pick that adoption agency?",
+    "gold": "Because they help LGBTQ+ folks with adoption",
+    "answer": "I don't have access to your past conversations.",
+    "f1": 0.0
+   },
+   {
+    "night": 2,
+    "q": "How does Melanie look after herself?",
+    "gold": "Running, reading, playing violin",
+    "answer": "Melanie looks tired.",
+    "f1": 0.0
+   },
+   {
+    "night": 2,
+    "q": "What was the race raising awareness for?",
+    "gold": "Mental health",
+    "answer": "Racial equality",
+    "f1": 0.0
+   },
+   {
+    "night": 3,
+    "q": "Who supports Caroline?",
+    "gold": "Her friends, family and mentors",
+    "answer": "Caroline's family",
+    "f1": 0.3333333333333333
+   },
+   {
+    "night": 4,
+    "q": "Why is she changing careers?",
+    "gold": "To help people with similar experiences",
+    "answer": "She wants to explore new opportunities.",
+    "f1": 0.16666666666666666
+   },
+   {
+    "night": 5,
+    "q": "What does the bowl look like?",
+    "gold": "Black and white",
+    "answer": "Blue and white",
+    "f1": 0.5
+   },
+   {
+    "night": 5,
+    "q": "What made Melanie take up pottery?",
+    "gold": "Creativity and skill",
+    "answer": "Melanie took up pottery because she wanted to create something meaningful.",
+    "f1": 0.0
+   },
+   {
+    "night": 7,
+    "q": "On what date did Melanie begin running longer distances?",
+    "gold": "12 July 2023",
+    "answer": "Never",
+    "f1": 0.0
+   },
+   {
+    "night": 9,
+    "q": "What month is the art show in?",
+    "gold": "July 2023",
+    "answer": "Unknown",
+    "f1": 0.0
+   },
+   {
+    "night": 10,
+    "q": "In which place was the pride parade held?",
+    "gold": "In the city",
+    "answer": "Unknown",
+    "f1": 0.0
+   },
+   {
+    "night": 11,
+    "q": "What is the painting called?",
+    "gold": "Embracing Identity",
+    "answer": "Unknown",
+    "f1": 0.0
+   },
+   {
+    "night": 11,
+    "q": "What does Caroline's art express?",
+    "gold": "Expressing her trans experience",
+    "answer": "Her art expresses resilience and hope.",
+    "f1": 0.4444444444444445
+   },
+   {
+    "night": 13,
+    "q": "What did painting feel like for Caroline?",
+    "gold": "Liberated and empowered",
+    "answer": "Painting felt like magic.",
+    "f1": 0.0
+   },
+   {
+    "night": 15,
+    "q": "What is the theme of the song?",
+    "gold": "Courage and fighting for what's right",
+    "answer": "Love and loss",
+    "f1": 0.0
+   },
+   {
+    "night": 16,
+    "q": "Which colors were in the painting?",
+    "gold": "Red and blue",
+    "answer": "Blue, red, and yellow",
+    "f1": 0.8
+   },
+   {
+    "night": 16,
+    "q": "Which kinds of art does Melanie like?",
+    "gold": "Painting and pottery",
+    "answer": "Paintings",
+    "f1": 0.6666666666666666
+   },
+   {
+    "night": 17,
+    "q": "On what date did Melanie get in touch with her mentor?",
+    "gold": "13 October 2023",
+    "answer": "Unknown",
+    "f1": 0.0
+   },
+   {
+    "night": 18,
+    "q": "On what date was Melanie's family at the Grand Canyon?",
+    "gold": "20 October 2023",
+    "answer": "Unknown",
+    "f1": 0.0
+   },
+   {
+    "night": 19,
+    "q": "On what date did Caroline discover her true self?",
+    "gold": "22 October 2023",
+    "answer": "Never",
+    "f1": 0.0
+   }
+  ]
+ },
+ "s": 351
+}
