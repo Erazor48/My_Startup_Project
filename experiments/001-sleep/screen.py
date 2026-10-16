@@ -78,14 +78,15 @@ class ScreenSleep(LocoSleep):
         self.log.append({"today_cards": len(today), "examples": len(examples), "loss": loss, "cards": today})
 
     def attach_notes(self) -> None:
-        """Hybrid: the cards written so far, searchable by embedding, whose top-k go in the prompt next to the adapter."""
-        self.rag = locomo_run.LocoRag(self.lm, self.top_k)
+        """The cards written so far, searchable by embedding; top-k of them go in the prompt (next to the adapter, or alone)."""
+        self.rag = locomo_run.LocoRag(self.lm, 1)
         self.rag.snippets = [f"({self.dates[n]}) {q} -> {a}" for n, cards in sorted(self.by_night.items()) for q, a in cards]
         self.rag.embeddings = self.rag.encoder.encode(self.rag.snippets, convert_to_tensor=True, normalize_embeddings=True)
 
     def answer(self, question: str):
         if not self.top_k:
             return super().answer(question)
+        self.rag.top_k = self.top_k
         notes = "\n".join(self.rag.retrieve(question))
         return self.lm.chat([{"role": "user", "content": NOTES_PROMPT.format(notes=notes, question=question)}], max_new_tokens=24)
 
@@ -108,24 +109,35 @@ def run(args) -> None:
     by_night = {n: night_cards(args.cards, n, state) for n in range(1, SESSIONS + 1)}
     questions = [q for q in conv.questions if q.answerable_after(SESSIONS)]
     speakers = tuple(sorted({s for sess in conv.sessions for s, _ in sess.turns}))[:2]
-    memory = ScreenSleep(LM(system=locomo_run.ANSWER_SYSTEM), args.seed, speakers, by_night, args.replay, args.hybrid_top_k)
+    memory = ScreenSleep(LM(system=locomo_run.ANSWER_SYSTEM), args.seed, speakers, by_night, args.replay, 0)
     for session in conv.sessions[:SESSIONS]:
         memory.live_day(session)
         memory.sleep()
         print(f"night {memory.night}: {len(memory.by_night[memory.night])} cards, trained in {memory.train_s[-1]} s", flush=True)
     recall = card_recall(memory)
-    if args.hybrid_top_k:
-        memory.attach_notes()
-    records = locomo_run.evaluate(memory, questions)
-    f1 = 100 * sum(r["f1"] for r in records) / len(records)
-    tokens = sum(r["prompt_tokens"] for r in records) / len(records)
     OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / f"{args.name}_seed{args.seed}.json").write_text(json.dumps({
-        "args": {k: str(v) for k, v in vars(args).items()}, "questions": len(records), "f1": f1, "prompt_tokens": tokens,
-        "card_recall": recall, "train_s": memory.train_s, "cards": sum(len(c) for c in by_night.values()), "records": records,
-    }, indent=1))
-    print(f"{args.name}: F1 {f1:.1f} over {len(records)} questions, {tokens:.0f} prompt tokens, card recall {recall['f1']:.1f}, "
-          f"training {sum(memory.train_s) / 60:.1f} min")
+    cards_total = sum(len(c) for c in by_night.values())
+
+    def save(label: str, records: list[dict], **extra) -> None:
+        f1 = 100 * sum(r["f1"] for r in records) / len(records)
+        tokens = sum(r["prompt_tokens"] for r in records) / len(records)
+        (OUT / f"{label}_seed{args.seed}.json").write_text(json.dumps({
+            "args": {k: str(v) for k, v in vars(args).items()}, "questions": len(records), "f1": f1, "prompt_tokens": tokens,
+            "card_recall": recall, "train_s": memory.train_s, "cards": cards_total, "records": records, **extra,
+        }, indent=1))
+        print(f"{label}: F1 {f1:.1f} over {len(records)} questions, {tokens:.0f} prompt tokens, card recall {recall['f1']:.1f}, "
+              f"training {sum(memory.train_s) / 60:.1f} min", flush=True)
+
+    save(args.name, locomo_run.evaluate(memory, questions))
+    memory.lm.model.save_pretrained(HERE / "adapters" / f"screen_{args.name}_seed{args.seed}")
+    memory.attach_notes()
+    if args.hybrid_top_k:  # hybrid A: the adapter and the k closest cards
+        memory.top_k = args.hybrid_top_k
+        save(f"{args.name}_hybrid{args.hybrid_top_k}", locomo_run.evaluate(memory, questions))
+    if args.rag_ref:  # the honest competitor: the same cards in a RAG, base model without adapter
+        memory.top_k = args.rag_ref
+        with memory.lm.model.disable_adapter():
+            save(f"{args.name}_ragref{args.rag_ref}", locomo_run.evaluate(memory, questions))
 
 
 def load(name: str) -> dict:
@@ -155,7 +167,8 @@ if __name__ == "__main__":
     p.add_argument("name")
     p.add_argument("--cards", default="2b", help="extraction variant: a directory of cards_cache, or 2b for the cards of the C4 run")
     p.add_argument("--replay", choices=["diluted", "full"], default="diluted", help="diluted: 24 random old cards per night; full: all of them")
-    p.add_argument("--hybrid-top-k", type=int, default=0, help="put the k closest cards in the prompt next to the adapter")
+    p.add_argument("--hybrid-top-k", type=int, default=0, help="hybrid A: also answer with the adapter and the k closest cards in the prompt")
+    p.add_argument("--rag-ref", type=int, default=10, help="also answer with a RAG top-k over the same cards and no adapter (0: skip)")
     p.add_argument("--seed", type=int, default=0)
     p = sub.add_parser("compare")
     p.add_argument("a")
