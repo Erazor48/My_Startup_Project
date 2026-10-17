@@ -57,16 +57,17 @@ def mean(values: list[float]) -> float:
     return 100 * sum(values) / len(values) if values else float("nan")
 
 
-def coverage(cards_path: Path | None = None) -> None:
+def coverage(cards_path: Path | None = None, sessions: int | None = None) -> None:
     conv = locomo.load(0)
     cards, state, night = load_cards()
     if cards_path:
         cards = [(c["q"], c["a"]) for c in json.loads(cards_path.read_text())]
-    print(f"cards: {len(cards)} ({len(set(cards))} distinct)" + ("" if cards_path else f" after night {night}"))
-    covered = {q.question: covering_card(q, cards) for q in conv.questions}
+    questions = [q for q in conv.questions if sessions is None or q.answerable_after(sessions)]
+    print(f"cards: {len(cards)} ({len(set(cards))} distinct)" + ("" if cards_path else f" after night {night}") + f", {len(questions)} questions")
+    covered = {q.question: covering_card(q, cards) for q in questions}
     c4 = load_records("c4_sleep_replay_conv0") if (RUNS / "c4_sleep_replay_conv0.json").exists() else {}
     rows = defaultdict(lambda: {"covered": [], "uncovered": []})
-    for q in conv.questions:
+    for q in questions:
         side = "covered" if covered[q.question] else "uncovered"
         for key in ("all", locomo.CATEGORIES[q.category]):
             rows[key][side].append(c4[q.question]["f1"] if q.question in c4 else None)
@@ -224,9 +225,10 @@ if __name__ == "__main__":
     parser.add_argument("--top-k", type=int, default=10)
     parser.add_argument("--cards", type=Path, help="JSON list of {night, date, q, a} instead of the cards of the C4 state")
     parser.add_argument("--tag", default="2b", help="label of the card source in the output names")
+    parser.add_argument("--sessions", type=int, help="coverage: only the questions answerable within the first N sessions")
     args = parser.parse_args()
     {
-        "coverage": lambda: coverage(args.cards), "paired": paired,
+        "coverage": lambda: coverage(args.cards, args.sessions), "paired": paired,
         "rag": lambda: card_rag(args.top_k, args.cards, args.tag),
         "recall": lambda: recall(STATE.parent),
         "onepass": lambda: one_pass(args.cards, args.tag),

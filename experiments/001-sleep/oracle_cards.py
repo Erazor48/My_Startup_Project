@@ -87,6 +87,15 @@ def parse(text: str) -> list[dict]:
     return [{"q": c["q"].strip(), "a": str(c["a"]).strip()} for c in json.loads(match.group(0)) if c.get("q") and c.get("a")]
 
 
+def distinct(cards: list[dict]) -> list[dict]:
+    seen, out = set(), []
+    for c in cards:
+        if (c["q"].lower(), c["a"].lower()) not in seen:
+            seen.add((c["q"].lower(), c["a"].lower()))
+            out.append(c)
+    return out
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--conv", type=int, default=0)
@@ -107,12 +116,7 @@ def main() -> None:
         if not path.exists():
             text = "\n".join(f"{speaker}: {line}" for speaker, line in session.turns)
             cards = parse(call(key, args.model, PROMPT.format(date=date, conversation=text), f"{args.variant} night {night}"))
-            seen, distinct = set(), []
-            for c in cards:
-                if (c["q"].lower(), c["a"].lower()) not in seen:
-                    seen.add((c["q"].lower(), c["a"].lower()))
-                    distinct.append(c)
-            path.write_text(json.dumps(distinct, indent=1))
+            path.write_text(json.dumps(distinct(cards), indent=1))
         merged += [{"night": night, "date": date, **c} for c in json.loads(path.read_text())]
     out = cache / "all.json"
     out.write_text(json.dumps(merged, indent=1))
