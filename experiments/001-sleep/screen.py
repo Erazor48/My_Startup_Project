@@ -1,10 +1,12 @@
 """Quick screening of sleep variants on S8: the first 8 sessions of a LoCoMo conversation and the questions whose evidence lies in them.
+--conv and --sessions change that (defaults: conversation 0, 8 sessions); a non-default pair prefixes the result files with c<conv>s<sessions>_.
 
     uv run python screen.py run baseline                               # 2B cards, diluted replay (the C4 recipe)
     uv run python screen.py run oracle --cards oracle_haiku            # one change: the cards
     uv run python screen.py run full_replay --replay full              # one change: the replay
     uv run python screen.py run hybrid_a --hybrid-top-k 2              # one change: top-2 cards in the prompt
     uv run python screen.py rag --cards oracle_haiku --top-k 1 2 4     # control: same cards in a RAG, bare model, no training
+    uv run python screen.py run full --conv 0 --sessions 19 --cards oracle_haiku --hybrid-top-k 2   # the whole of conv-26
     uv run python screen.py compare baseline oracle                    # paired F1 difference on the same questions
 
 Cards of an extraction variant live in cards_cache/<variant>/night_XX.json ([{q, a}]); the 2b variant is read
@@ -30,9 +32,24 @@ HERE = Path(__file__).parent
 CACHE = HERE / "cards_cache"
 OUT = HERE / "runs" / "screen"
 C4_STATE = HERE / "adapters" / "locomo_c4_sleep_replay_conv0_seed0" / "state.pkl"
-SESSIONS = 8
 RECALL_PER_NIGHT = 5
 NOTES_PROMPT = "Notes about past conversations (with their dates):\n{notes}\n\n{question}"
+
+
+def setup(args):
+    """The conversation, the cards of each night, the questions answerable in those nights, the speakers and the file prefix."""
+    conv = locomo.load(args.conv)
+    state = None
+    if args.cards == "2b":
+        if (args.conv, args.sessions) != (0, 8):
+            raise SystemExit("the 2b cards exist only for conv 0, 8 sessions (the C4 run)")
+        with open(C4_STATE, "rb") as f:
+            state = pickle.load(f)
+    by_night = {n: night_cards(args.cards, n, state) for n in range(1, args.sessions + 1)}
+    questions = [q for q in conv.questions if q.answerable_after(args.sessions)]
+    speakers = tuple(sorted({s for sess in conv.sessions for s, _ in sess.turns}))[:2]
+    prefix = "" if (args.conv, args.sessions) == (0, 8) else f"c{args.conv}s{args.sessions}_"
+    return conv, by_night, questions, speakers, prefix
 
 
 def night_cards(variant: str, night: int, state: dict | None) -> list[tuple[str, str]]:
@@ -104,14 +121,9 @@ def card_recall(memory: ScreenSleep, seed: int = 0) -> dict:
 
 
 def run(args) -> None:
-    conv = locomo.load(0)
-    with open(C4_STATE, "rb") as f:
-        state = pickle.load(f)
-    by_night = {n: night_cards(args.cards, n, state) for n in range(1, SESSIONS + 1)}
-    questions = [q for q in conv.questions if q.answerable_after(SESSIONS)]
-    speakers = tuple(sorted({s for sess in conv.sessions for s, _ in sess.turns}))[:2]
+    conv, by_night, questions, speakers, prefix = setup(args)
     memory = ScreenSleep(LM(system=locomo_run.ANSWER_SYSTEM), args.seed, speakers, by_night, args.replay, 0)
-    for session in conv.sessions[:SESSIONS]:
+    for session in conv.sessions[:args.sessions]:
         memory.live_day(session)
         memory.sleep()
         print(f"night {memory.night}: {len(memory.by_night[memory.night])} cards, trained in {memory.train_s[-1]} s", flush=True)
@@ -123,7 +135,7 @@ def run(args) -> None:
         f1 = 100 * sum(r["f1"] for r in records) / len(records)
         tokens = sum(r["prompt_tokens"] for r in records) / len(records)
         median = lambda key: sorted(r[key] for r in records)[len(records) // 2]  # noqa: E731
-        (OUT / f"{label}_seed{args.seed}.json").write_text(json.dumps({
+        (OUT / f"{prefix}{label}_seed{args.seed}.json").write_text(json.dumps({
             "args": {k: str(v) for k, v in vars(args).items()}, "questions": len(records), "f1": f1, "prompt_tokens": tokens,
             "median_prompt_tokens": median("prompt_tokens"), "median_prefill_s": median("prefill_s"),
             "card_recall": recall, "train_s": memory.train_s, "cards": cards_total, "records": records, **extra,
@@ -132,7 +144,7 @@ def run(args) -> None:
               f"training {sum(memory.train_s) / 60:.1f} min", flush=True)
 
     save(args.name, locomo_run.evaluate(memory, questions))
-    memory.lm.model.save_pretrained(HERE / "adapters" / f"screen_{args.name}_seed{args.seed}")
+    memory.lm.model.save_pretrained(HERE / "adapters" / f"screen_{prefix}{args.name}_seed{args.seed}")
     memory.attach_notes()
     if args.hybrid_top_k:  # hybrid A: the adapter and the k closest cards
         memory.top_k = args.hybrid_top_k
@@ -145,14 +157,9 @@ def run(args) -> None:
 
 def rag(args) -> None:
     """Control for hybrid A: the cards of a variant in a RAG over the bare model (no adapter, no training)."""
-    conv = locomo.load(0)
-    with open(C4_STATE, "rb") as f:
-        state = pickle.load(f)
-    by_night = {n: night_cards(args.cards, n, state) for n in range(1, SESSIONS + 1)}
-    questions = [q for q in conv.questions if q.answerable_after(SESSIONS)]
-    speakers = tuple(sorted({s for sess in conv.sessions for s, _ in sess.turns}))[:2]
+    conv, by_night, questions, speakers, prefix = setup(args)
     memory = ScreenSleep(LM(system=locomo_run.ANSWER_SYSTEM), args.seed, speakers, by_night, "diluted", 0)
-    for session in conv.sessions[:SESSIONS]:
+    for session in conv.sessions[:args.sessions]:
         memory.live_day(session)
     memory.attach_notes()
     OUT.mkdir(parents=True, exist_ok=True)
@@ -162,7 +169,7 @@ def rag(args) -> None:
         records = locomo_run.evaluate(memory, questions)
         median = lambda key: sorted(r[key] for r in records)[len(records) // 2]  # noqa: E731
         f1 = 100 * sum(r["f1"] for r in records) / len(records)
-        (OUT / f"{name}_ragref{k}_seed{args.seed}.json").write_text(json.dumps({
+        (OUT / f"{prefix}{name}_ragref{k}_seed{args.seed}.json").write_text(json.dumps({
             "args": {a: str(v) for a, v in vars(args).items()} | {"top_k": str(k)}, "questions": len(records), "f1": f1,
             "prompt_tokens": sum(r["prompt_tokens"] for r in records) / len(records),
             "median_prompt_tokens": median("prompt_tokens"), "median_prefill_s": median("prefill_s"),
@@ -206,10 +213,14 @@ if __name__ == "__main__":
     p.add_argument("--hybrid-top-k", type=int, default=0, help="hybrid A: also answer with the adapter and the k closest cards in the prompt")
     p.add_argument("--rag-ref", type=int, default=10, help="also answer with a RAG top-k over the same cards and no adapter (0: skip)")
     p.add_argument("--seed", type=int, default=0)
+    p.add_argument("--conv", type=int, default=0, help="LoCoMo conversation index")
+    p.add_argument("--sessions", type=int, default=8, help="sessions lived; the questions are those whose evidence lies in them")
     p = sub.add_parser("rag")
     p.add_argument("--cards", default="oracle_haiku")
     p.add_argument("--top-k", type=int, nargs="+", default=[1, 2, 4])
     p.add_argument("--seed", type=int, default=0)
+    p.add_argument("--conv", type=int, default=0, help="LoCoMo conversation index")
+    p.add_argument("--sessions", type=int, default=8, help="sessions lived; the questions are those whose evidence lies in them")
     p = sub.add_parser("compare")
     p.add_argument("a")
     p.add_argument("b")
