@@ -54,8 +54,24 @@ S8 = [
     ("screen/baseline_seed0.json", "2B cards in the weights", "weights"),
     ("screen/oracle_seed0.json", "Haiku cards in the weights", "weights"),
     ("screen/oracle_hybrid2_seed0.json", "Hybrid: weights + 2 Haiku cards", "hybrid"),
-    ("screen/*ragref2_seed0.json", "Control: RAG top-2, Haiku cards, no LoRA", "prompt"),
+    ("screen/oracle_ragref2_seed0.json", "Control: RAG top-2, Haiku cards, no LoRA", "prompt"),
     ("screen/oracle_ragref10_seed0.json", "RAG top-10, Haiku cards, no LoRA", "prompt"),
+]
+CONV26_150 = [
+    ("screen/c0s19_oracle_hybrid2_seed0.json", "Hybrid: weights + 2 Haiku cards", "hybrid"),
+    ("screen/c0s19_oracle_ragref2_seed0.json", "Control: RAG top-2, Haiku cards, no LoRA", "prompt"),
+    ("screen/c0s19_oracle_ragref10_seed0.json", "RAG top-10, Haiku cards, no LoRA", "prompt"),
+]
+S8_WRITERS = [
+    ("screen/2b_ragref2_seed0.json", "2B cards, RAG top-2", "prompt"),
+    ("screen/2b_ragref10_seed0.json", "2B cards, RAG top-10", "prompt"),
+    ("screen/oracle_ragref2_seed0.json", "Haiku cards, RAG top-2", "prompt"),
+    ("screen/oracle_ragref10_seed0.json", "Haiku cards, RAG top-10", "prompt"),
+    ("screen/local_qwen35_4b_ragref2_seed0.json", "Local 4B cards (v1), RAG top-2", "prompt"),
+    ("screen/local_qwen35_4b_ragref10_seed0.json", "Local 4B cards (v1), RAG top-10", "prompt"),
+    ("screen/local_qwen35_4b_v2_ragref2_seed0.json", "Local 4B cards (v2, loop guard), RAG top-2", "prompt"),
+    ("screen/local_qwen35_4b_v2_ragref10_seed0.json", "Local 4B cards (v2, loop guard), RAG top-10", "prompt"),
+    ("screen/local4b_hybrid2_seed0.json", "Hybrid: weights + 2 local 4B cards (v1)", "hybrid"),
 ]
 ARC = [("base.json", "Base model"), ("locomo_c3_lora_raw_conv0.json", "Naive LoRA on raw text"),
        ("locomo_c4_sleep_replay_conv0.json", "Sleep V1"), ("locomo_c5_sleep_integrate_conv0.json", "Sleep V2")]
@@ -129,6 +145,17 @@ def night_cost(exp: Path, conv: list[dict]) -> None:
     saved = rag["prefill"] - weights["prefill"]
     print(f"- prefill saved per question vs RAG top-10 raw: {rag['prefill']:.2f} - {weights['prefill']:.2f} = {saved:.2f} s; "
           f"one night pays back after about {night / saved:.0f} questions per session")
+
+
+def writer_cost(exp: Path) -> None:
+    """Per-session cost of the local card writer on S8 (8 sessions, all attempts of a session summed)."""
+    for variant in ("local_qwen35_4b", "local_qwen35_4b_v2"):
+        sessions = json.loads((exp / "cards_cache" / variant / "timing.json").read_text())["sessions"]
+        wall, cpu, rss, tokens = ([sum(a[key] for a in s["attempts"]) for s in sessions.values()] for key in ("wall_s", "cpu_s", "peak_rss_mb", "new_tokens"))
+        peak = max(max(a["peak_rss_mb"] for a in s["attempts"]) for s in sessions.values())
+        print(f"- {variant}: median wall {median(wall):.0f} s (max {max(wall):.0f} s, {max(wall) / median(wall):.1f}x), "
+              f"median CPU {median(cpu) / 60:.1f} min (max {max(cpu) / 60:.1f} min), peak RAM {peak / 1000:.1f} GB, "
+              f"max tokens {max(tokens)}, {len(sessions)} sessions")
 
 
 def arc(exp: Path) -> None:
@@ -226,6 +253,11 @@ def main() -> None:
     paired(s8, "Hybrid: weights + 2 Haiku cards", "RAG top-10, Haiku cards, no LoRA")
     if not next(r for r in s8 if r["label"].startswith("Control"))["pending"]:
         paired(s8, "Control: RAG top-2, Haiku cards, no LoRA", "Hybrid: weights + 2 Haiku cards")
+    table("conv-26 complete (19 sessions, 150 questions)", load(runs, CONV26_150))
+    writers = load(runs, S8_WRITERS)
+    table("Card writers on S8, reader Qwen3.5-2B without adapter (66 questions)", writers)
+    print("\n### Local card writer cost on S8\n")
+    writer_cost(exp)
     print("\n### Night cost (conv-26)\n")
     night_cost(exp, conv)
     arc(exp)
