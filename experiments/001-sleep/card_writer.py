@@ -23,6 +23,8 @@ from oracle_cards import PROMPT, distinct
 HERE = Path(__file__).parent
 ALLOWED_MODEL = "Qwen/Qwen3.5-4B"
 MAX_NEW_TOKENS = 4096
+# per variant: (max_new_tokens, repetition_penalty). v2 caps a looping reply (session 8 of S8 ran to 4096 tokens in v1).
+SETTINGS = {"local_qwen35_4b": (4096, 1.0), "local_qwen35_4b_v2": (2048, 1.05)}
 RETRY_SUFFIX = "\n\nReply with the JSON list only: start with [ and end with ]. Keep every answer short."
 
 
@@ -54,8 +56,9 @@ def parse(text: str) -> tuple[list[dict], str]:
 
 
 class Writer:
-    def __init__(self, model_name: str = ALLOWED_MODEL):
+    def __init__(self, model_name: str = ALLOWED_MODEL, max_new_tokens: int = MAX_NEW_TOKENS, repetition_penalty: float = 1.0):
         check_model(model_name)
+        self.max_new_tokens, self.repetition_penalty = max_new_tokens, repetition_penalty
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = AutoModelForCausalLM.from_pretrained(model_name, dtype=torch.bfloat16)
         self.model.eval()
@@ -71,13 +74,13 @@ class Writer:
             self.model(**ids, use_cache=True)  # the prefill alone, timed apart
             prefill_s = time.time() - wall
             out = self.model.generate(
-                **ids, max_new_tokens=MAX_NEW_TOKENS, do_sample=False,
+                **ids, max_new_tokens=self.max_new_tokens, do_sample=False, repetition_penalty=self.repetition_penalty,
                 eos_token_id=self.end_of_turn, pad_token_id=self.tokenizer.pad_token_id,
             )
         new = out[0, n_prompt:]
         return {
             "text": self.tokenizer.decode(new, skip_special_tokens=True).strip(), "prompt_tokens": n_prompt, "new_tokens": len(new),
-            "truncated": len(new) >= MAX_NEW_TOKENS, "prefill_s": round(prefill_s, 2), "generate_s": round(time.time() - wall - prefill_s, 2),
+            "truncated": len(new) >= self.max_new_tokens, "prefill_s": round(prefill_s, 2), "generate_s": round(time.time() - wall - prefill_s, 2),
             "wall_s": round(time.time() - wall, 2), "cpu_s": round(time.process_time() - cpu, 1), "peak_rss_mb": round(peak_rss_mb()),
         }
 
@@ -102,7 +105,7 @@ def main() -> None:
         path = cache / f"night_{night:02d}.json"
         date = locomo.date_only(session.date)
         if not path.exists():
-            writer = writer or Writer(args.model)
+            writer = writer or Writer(args.model, *SETTINGS.get(args.variant, SETTINGS["local_qwen35_4b"]))
             conversation = "\n".join(f"{speaker}: {line}" for speaker, line in session.turns)
             prompt = PROMPT.format(date=date, conversation=conversation)
             attempts = []
