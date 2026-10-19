@@ -25,6 +25,7 @@ ALLOWED_MODEL = "Qwen/Qwen3.5-4B"
 MAX_NEW_TOKENS = 4096
 # per variant: (max_new_tokens, repetition_penalty). v2 caps a looping reply (session 8 of S8 ran to 4096 tokens in v1).
 SETTINGS = {"local_qwen35_4b": (4096, 1.0), "local_qwen35_4b_v2": (2048, 1.05)}
+DEFAULT_SETTINGS = (2048, 1.0)  # v1 decoding with only the circuit breaker, for every other variant name (v2 did not pass its gate)
 RETRY_SUFFIX = "\n\nReply with the JSON list only: start with [ and end with ]. Keep every answer short."
 
 
@@ -105,7 +106,7 @@ def main() -> None:
         path = cache / f"night_{night:02d}.json"
         date = locomo.date_only(session.date)
         if not path.exists():
-            writer = writer or Writer(args.model, *SETTINGS.get(args.variant, SETTINGS["local_qwen35_4b"]))
+            writer = writer or Writer(args.model, *SETTINGS.get(args.variant, DEFAULT_SETTINGS))
             conversation = "\n".join(f"{speaker}: {line}" for speaker, line in session.turns)
             prompt = PROMPT.format(date=date, conversation=conversation)
             attempts = []
