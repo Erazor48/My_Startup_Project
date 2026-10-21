@@ -1,0 +1,548 @@
+[
+ {
+  "night": 1,
+  "date": "8 May 2023",
+  "q": "When did Caroline attend the LGBTQ support group?",
+  "a": "7 May 2023"
+ },
+ {
+  "night": 1,
+  "date": "8 May 2023",
+  "q": "What did Caroline find inspiring at the support group?",
+  "a": "Transgender stories"
+ },
+ {
+  "night": 1,
+  "date": "8 May 2023",
+  "q": "What career options is Caroline considering?",
+  "a": "Counseling or mental health work"
+ },
+ {
+  "night": 1,
+  "date": "8 May 2023",
+  "q": "Why does Caroline want to work in mental health?",
+  "a": "To support those with similar issues"
+ },
+ {
+  "night": 1,
+  "date": "8 May 2023",
+  "q": "When did Melanie paint the lake sunrise?",
+  "a": "May 2023"
+ },
+ {
+  "night": 1,
+  "date": "8 May 2023",
+  "q": "What is Melanie's hobby?",
+  "a": "Painting"
+ },
+ {
+  "night": 1,
+  "date": "8 May 2023",
+  "q": "How does Melanie use painting?",
+  "a": "To express feelings and relax"
+ },
+ {
+  "night": 1,
+  "date": "8 May 2023",
+  "q": "Who is Melanie taking swimming with?",
+  "a": "The kids"
+ },
+ {
+  "night": 2,
+  "date": "25 May 2023",
+  "q": "When did Melanie run the charity race?",
+  "a": "28 May 2023"
+ },
+ {
+  "night": 2,
+  "date": "25 May 2023",
+  "q": "What is Melanie's hobby besides running?",
+  "a": "Reading or playing violin"
+ },
+ {
+  "night": 2,
+  "date": "25 May 2023",
+  "q": "Who does Melanie look after?",
+  "a": "Her family and kids"
+ },
+ {
+  "night": 2,
+  "date": "25 May 2023",
+  "q": "When are Melanie and her kids planning to go camping?",
+  "a": "June 2023"
+ },
+ {
+  "night": 2,
+  "date": "25 May 2023",
+  "q": "What is Caroline researching?",
+  "a": "Adoption agencies"
+ },
+ {
+  "night": 2,
+  "date": "25 May 2023",
+  "q": "Why did Caroline choose the specific adoption agency she mentioned?",
+  "a": "They help LGBTQ+ folks with adoption"
+ },
+ {
+  "night": 2,
+  "date": "25 May 2023",
+  "q": "What is Caroline's goal regarding her family?",
+  "a": "To give kids a loving home"
+ },
+ {
+  "night": 3,
+  "date": "9 June 2023",
+  "q": "When did Caroline give her school event?",
+  "a": "8 June 2023"
+ },
+ {
+  "night": 3,
+  "date": "9 June 2023",
+  "q": "How long had Caroline been transitioning when she gave the talk?",
+  "a": "three years ago"
+ },
+ {
+  "night": 3,
+  "date": "9 June 2023",
+  "q": "What was Caroline's transgender journey about?",
+  "a": "encouraging LGBTQ involvement"
+ },
+ {
+  "night": 3,
+  "date": "9 June 2023",
+  "q": "Who motivated Caroline according to Melanie?",
+  "a": "Melanie's family"
+ },
+ {
+  "night": 3,
+  "date": "9 June 2023",
+  "q": "How long had Caroline known her friends since moving from her home country?",
+  "a": "4 years"
+ },
+ {
+  "night": 3,
+  "date": "9 June 2023",
+  "q": "What happened before Caroline's friends helped her after the breakup?",
+  "a": "tough breakup"
+ },
+ {
+  "night": 3,
+  "date": "9 June 2023",
+  "q": "Who supports Melanie?",
+  "a": "Melanie's husband and kids"
+ },
+ {
+  "night": 3,
+  "date": "9 June 2023",
+  "q": "How long had Melanie been married?",
+  "a": "5 years"
+ },
+ {
+  "night": 3,
+  "date": "9 June 2023",
+  "q": "When did Melanie put on the dress mentioned in the photo?",
+  "a": "9 June 2023"
+ },
+ {
+  "night": 3,
+  "date": "9 June 2023",
+  "q": "What activities did Melanie do with her family?",
+  "a": "played games, ate good food, hung out"
+ },
+ {
+  "night": 4,
+  "date": "27 June 2023",
+  "q": "What date was the conversation held?",
+  "a": "27 June 2023"
+ },
+ {
+  "night": 4,
+  "date": "27 June 2023",
+  "q": "Who is Melanie talking to?",
+  "a": "Caroline"
+ },
+ {
+  "night": 4,
+  "date": "27 June 2023",
+  "q": "Where did Caroline receive her necklace from?",
+  "a": "Sweden"
+ },
+ {
+  "night": 4,
+  "date": "27 June 2023",
+  "q": "Who gave Caroline the necklace?",
+  "a": "Her grandma"
+ },
+ {
+  "night": 4,
+  "date": "27 June 2023",
+  "q": "What does the necklace stand for?",
+  "a": "Love, faith and strength"
+ },
+ {
+  "night": 4,
+  "date": "27 June 2023",
+  "q": "When was the hand-painted bowl made?",
+  "a": "18 June 2013"
+ },
+ {
+  "night": 4,
+  "date": "27 June 2023",
+  "q": "Who made the hand-painted bowl?",
+  "a": "A friend"
+ },
+ {
+  "night": 4,
+  "date": "27 June 2023",
+  "q": "What did Melanie do with her family last week?",
+  "a": "Camping in the mountains"
+ },
+ {
+  "night": 4,
+  "date": "27 June 2023",
+  "q": "What activities did Melanie's family do while camping?",
+  "a": "Exploring nature, roasting marshmallows, hiking"
+ },
+ {
+  "night": 4,
+  "date": "27 June 2023",
+  "q": "How old are Melanie's younger kids?",
+  "a": "Unknown"
+ },
+ {
+  "night": 4,
+  "date": "27 June 2023",
+  "q": "When did Caroline go to the LGBTQ+ counseling workshop?",
+  "a": "30 June 2023"
+ },
+ {
+  "night": 4,
+  "date": "27 June 2023",
+  "q": "What specific group of people is Caroline interested in helping through counseling?",
+  "a": "Trans people"
+ },
+ {
+  "night": 4,
+  "date": "27 June 2023",
+  "q": "What inspired Caroline to pursue a career in counseling?",
+  "a": "Her own journey and support"
+ },
+ {
+  "night": 5,
+  "date": "3 July 2023",
+  "q": "When did Caroline go to the LGBTQ+ pride parade?",
+  "a": "1 July 2023"
+ },
+ {
+  "night": 5,
+  "date": "3 July 2023",
+  "q": "What is Caroline's career goal?",
+  "a": "Counseling and mental health"
+ },
+ {
+  "night": 5,
+  "date": "3 July 2023",
+  "q": "When did Melanie sign up for a pottery class?",
+  "a": "2 July 2023"
+ },
+ {
+  "night": 5,
+  "date": "3 July 2023",
+  "q": "What activity is Caroline learning?",
+  "a": "Piano"
+ },
+ {
+  "night": 5,
+  "date": "3 July 2023",
+  "q": "Who made the black and white bowl?",
+  "a": "Melanie"
+ },
+ {
+  "night": 5,
+  "date": "3 July 2023",
+  "q": "When is Caroline going to the transgender conference?",
+  "a": "July 2023"
+ },
+ {
+  "night": 6,
+  "date": "6 July 2023",
+  "q": "What did Melanie do on 5 July 2023?",
+  "a": "Took kids to museum"
+ },
+ {
+  "night": 6,
+  "date": "6 July 2023",
+  "q": "What exhibit did the kids like at the museum?",
+  "a": "Dinosaur exhibit"
+ },
+ {
+  "night": 6,
+  "date": "6 July 2023",
+  "q": "What is Caroline creating for her future children?",
+  "a": "A library"
+ },
+ {
+  "night": 6,
+  "date": "6 July 2023",
+  "q": "What types of books does Caroline have in her library?",
+  "a": "Kids' books, classics, stories from different cultures, educational books"
+ },
+ {
+  "night": 6,
+  "date": "6 July 2023",
+  "q": "What book did Melanie love reading as a child?",
+  "a": "Charlotte's Web"
+ },
+ {
+  "night": 6,
+  "date": "6 July 2023",
+  "q": "When did Caroline and her friends/family have a picnic?",
+  "a": "Last week (3 July 2023)"
+ },
+ {
+  "night": 6,
+  "date": "6 July 2023",
+  "q": "What is Melanie doing with her family?",
+  "a": "Camping at the beach"
+ },
+ {
+  "night": 6,
+  "date": "6 July 2023",
+  "q": "What does Melanie infer about her family from camping?",
+  "a": "It brings them closer"
+ },
+ {
+  "night": 6,
+  "date": "6 July 2023",
+  "q": "What is Caroline passionate about?",
+  "a": "Helping people and making a positive impact"
+ },
+ {
+  "night": 6,
+  "date": "6 July 2023",
+  "q": "What career path is Caroline looking into?",
+  "a": "Counseling or mental health work"
+ },
+ {
+  "night": 6,
+  "date": "6 July 2023",
+  "q": "How does Melanie feel about being a mom?",
+  "a": "She loves it"
+ },
+ {
+  "night": 6,
+  "date": "6 July 2023",
+  "q": "What values does Charlotte's Web show to Melanie?",
+  "a": "Friendship and compassion"
+ },
+ {
+  "night": 6,
+  "date": "6 July 2023",
+  "q": "Who is helping Caroline with her transition?",
+  "a": "Her friends and family"
+ },
+ {
+  "night": 6,
+  "date": "6 July 2023",
+  "q": "How has the support network helped Caroline?",
+  "a": "By giving love, guidance, and acceptance"
+ },
+ {
+  "night": 7,
+  "date": "12 July 2023",
+  "q": "When did Caroline attend the LGBTQ conference?",
+  "a": "10 July 2023"
+ },
+ {
+  "night": 7,
+  "date": "12 July 2023",
+  "q": "What career is Caroline looking into?",
+  "a": "counseling and mental health jobs"
+ },
+ {
+  "night": 7,
+  "date": "12 July 2023",
+  "q": "Why did Caroline start looking into counseling careers?",
+  "a": "she struggled with mental health"
+ },
+ {
+  "night": 7,
+  "date": "12 July 2023",
+  "q": "When did Melanie read the book that inspired her?",
+  "a": "2022"
+ },
+ {
+  "night": 7,
+  "date": "12 July 2023",
+  "q": "What is the name of the book Melanie read?",
+  "a": "Becoming Nicole"
+ },
+ {
+  "night": 7,
+  "date": "12 July 2023",
+  "q": "Who wrote the book Becoming Nicole?",
+  "a": "Amy Ellis Nutt"
+ },
+ {
+  "night": 7,
+  "date": "12 July 2023",
+  "q": "What does Caroline love to do besides counseling?",
+  "a": "reading"
+ },
+ {
+  "night": 7,
+  "date": "12 July 2023",
+  "q": "Which book did Caroline say she loved?",
+  "a": "Becoming Nicole"
+ },
+ {
+  "night": 7,
+  "date": "12 July 2023",
+  "q": "What lesson did Caroline learn from the book Becoming Nicole?",
+  "a": "self-acceptance and finding support"
+ },
+ {
+  "night": 7,
+  "date": "12 July 2023",
+  "q": "What pets does Melanie have?",
+  "a": "a pup and a kitty"
+ },
+ {
+  "night": 7,
+  "date": "12 July 2023",
+  "q": "What are the names of Melanie's pets?",
+  "a": "Luna and Oliver"
+ },
+ {
+  "night": 7,
+  "date": "12 July 2023",
+  "q": "What new item did Melanie just get?",
+  "a": "shoes"
+ },
+ {
+  "night": 7,
+  "date": "12 July 2023",
+  "q": "What color are Melanie's new shoes?",
+  "a": "purple"
+ },
+ {
+  "night": 7,
+  "date": "12 July 2023",
+  "q": "What does Melanie use her running for?",
+  "a": "destressing and clearing her mind"
+ },
+ {
+  "night": 7,
+  "date": "12 July 2023",
+  "q": "How long has Melanie been running since their last chat?",
+  "a": "longer"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "When did Melanie take her kids to the pottery workshop?",
+  "a": "12 July 2023"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "What activity did Melanie and her kids do besides pottery?",
+  "a": "Painting nature-inspired art"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "When did Melanie and Caroline paint together?",
+  "a": "Last weekend of 2023"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "When did Caroline attend the council meeting for adoption?",
+  "a": "1 August 2023"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "What color does Caroline prefer?",
+  "a": "Blue"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "What do sunflowers represent according to Caroline?",
+  "a": "Warmth and happiness"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "What do roses represent according to Caroline?",
+  "a": "Love and beauty"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "When did Melanie get married?",
+  "a": "2022"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "Who was at Melanie's wedding?",
+  "a": "Everyone Melanie loves"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "What was the best part of Melanie's wedding day?",
+  "a": "Marrying her partner"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "When did Caroline attend the pride parade?",
+  "a": "15 August 2023"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "How did Caroline feel at the pride parade?",
+  "a": "Proud, grateful, and accepted"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "What was the best part of Caroline's transition journey?",
+  "a": "Being able to be herself without fear"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "How has Melanie found peace?",
+  "a": "Through creativity and family"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "When did Melanie move?",
+  "a": "Before 15 July 2023"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "How was Melanie's family during her move?",
+  "a": "Supportive and loving"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "Where did Melanie and her family go on a camping trip?",
+  "a": "The forest"
+ },
+ {
+  "night": 8,
+  "date": "15 July 2023",
+  "q": "What activities do Melanie and her family enjoy together?",
+  "a": "Hiking in the mountains and exploring forests"
+ }
+]

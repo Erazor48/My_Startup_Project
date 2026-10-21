@@ -10,11 +10,11 @@ Per session timing (prefill, generation, tokens, CPU time, peak RSS) goes to car
 
 import argparse
 import json
+import os
+import threading
 import time
+import urllib.request
 from pathlib import Path
-
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
 
 import locomo
 from lm import peak_rss_mb, reset_peak_rss
@@ -58,7 +58,11 @@ def parse(text: str) -> tuple[list[dict], str]:
 
 class Writer:
     def __init__(self, model_name: str = ALLOWED_MODEL, max_new_tokens: int = MAX_NEW_TOKENS, repetition_penalty: float = 1.0):
+        import torch
+        from transformers import AutoModelForCausalLM, AutoTokenizer
+
         check_model(model_name)
+        self.torch = torch
         self.max_new_tokens, self.repetition_penalty = max_new_tokens, repetition_penalty
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = AutoModelForCausalLM.from_pretrained(model_name, dtype=torch.bfloat16)
@@ -71,7 +75,7 @@ class Writer:
         n_prompt = ids.input_ids.shape[1]
         reset_peak_rss()
         cpu, wall = time.process_time(), time.time()
-        with torch.no_grad():
+        with self.torch.no_grad():
             self.model(**ids, use_cache=True)  # the prefill alone, timed apart
             prefill_s = time.time() - wall
             out = self.model.generate(
@@ -86,8 +90,81 @@ class Writer:
         }
 
 
+class OllamaProcesses:
+    """CPU time and peak resident memory of the Ollama server and its runners, sampled from /proc (the model lives in the runner, not in this process)."""
+
+    def __init__(self, server_name: str = "ollama"):
+        self.server_name, self.peak_kb, self._stop = server_name, 0, threading.Event()
+
+    @staticmethod
+    def _stat(pid: int) -> tuple[str, int, int, int] | None:
+        try:
+            raw = Path(f"/proc/{pid}/stat").read_text()
+            fields = raw[raw.rindex(")") + 2:].split()
+            rss = next(int(line.split()[1]) for line in Path(f"/proc/{pid}/status").read_text().splitlines() if line.startswith("VmRSS:"))
+            return Path(f"/proc/{pid}/comm").read_text().strip(), int(fields[1]), int(fields[11]) + int(fields[12]), rss
+        except (OSError, ValueError, StopIteration):
+            return None
+
+    def snapshot(self) -> tuple[float, int]:
+        """(CPU seconds, resident kB) summed over every process named ollama and over its children (the runners)."""
+        stats = {pid: s for pid in map(int, filter(str.isdigit, (p.name for p in Path("/proc").iterdir()))) if (s := self._stat(pid))}
+        family = {pid for pid, s in stats.items() if s[0] == self.server_name}
+        family |= {pid for pid, s in stats.items() if s[1] in family}
+        ticks = sum(stats[pid][2] for pid in family)
+        return ticks / os.sysconf("SC_CLK_TCK"), sum(stats[pid][3] for pid in family)
+
+    def start(self) -> None:
+        self.peak_kb, self._stop = 0, threading.Event()
+        self.cpu0 = self.snapshot()[0]
+
+        def poll() -> None:
+            while not self._stop.is_set():
+                self.peak_kb = max(self.peak_kb, self.snapshot()[1])
+                self._stop.wait(0.5)
+
+        self.thread = threading.Thread(target=poll, daemon=True)
+        self.thread.start()
+
+    def stop(self) -> tuple[float, int]:
+        self._stop.set()
+        self.thread.join()
+        cpu, kb = self.snapshot()
+        return cpu - self.cpu0, max(self.peak_kb, kb)
+
+
+class OllamaWriter:
+    """The same model as Writer (Qwen3.5-4B, Q4_K_M) served by Ollama: greedy, no thinking, same circuit breaker. CPU and RAM are those of the Ollama processes."""
+
+    def __init__(self, tag: str, max_new_tokens: int, repetition_penalty: float, num_ctx: int = 4096, cpu_only: bool = False, url: str = "http://localhost:11434"):
+        self.tag, self.url, self.processes = tag, url, OllamaProcesses()
+        self.options = {"temperature": 0, "num_predict": max_new_tokens, "repeat_penalty": repetition_penalty, "num_ctx": num_ctx, "seed": 0}
+        if cpu_only:  # Ollama offloads to the iGPU by itself (Vulkan); num_gpu 0 keeps every layer on the CPU
+            self.options["num_gpu"] = 0
+        self.max_new_tokens = max_new_tokens
+
+    def write(self, prompt: str) -> dict:
+        body = {"model": self.tag, "messages": [{"role": "user", "content": prompt}], "think": False, "stream": False, "options": self.options, "keep_alive": "30m"}
+        request = urllib.request.Request(f"{self.url}/api/chat", json.dumps(body).encode(), {"Content-Type": "application/json"})
+        self.processes.start()
+        wall = time.time()
+        with urllib.request.urlopen(request, timeout=3600) as response:
+            reply = json.load(response)
+        wall = time.time() - wall
+        cpu_s, peak_kb = self.processes.stop()
+        ns = 1e9
+        return {
+            "text": reply["message"]["content"].strip(), "prompt_tokens": reply["prompt_eval_count"], "new_tokens": reply["eval_count"],
+            "truncated": reply["eval_count"] >= self.max_new_tokens, "prefill_s": round(reply["prompt_eval_duration"] / ns, 2),
+            "generate_s": round(reply["eval_duration"] / ns, 2), "load_s": round(reply["load_duration"] / ns, 2), "wall_s": round(wall, 2),
+            "tokens_per_s": round(reply["eval_count"] / (reply["eval_duration"] / ns), 2), "cpu_s": round(cpu_s, 1), "peak_rss_mb": round(peak_kb / 1024),
+        }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
+    parser.add_argument("--ollama", metavar="TAG", help="write with this Ollama tag (Qwen3.5-4B Q4_K_M) instead of transformers bf16")
+    parser.add_argument("--cpu-only", action="store_true", help="with --ollama: no layer on the iGPU")
     parser.add_argument("--conv", type=int, default=0)
     parser.add_argument("--sessions", type=int, help="only the first N sessions")
     parser.add_argument("--variant", default="local_qwen35_4b")
@@ -106,7 +183,8 @@ def main() -> None:
         path = cache / f"night_{night:02d}.json"
         date = locomo.date_only(session.date)
         if not path.exists():
-            writer = writer or Writer(args.model, *SETTINGS.get(args.variant, DEFAULT_SETTINGS))
+            settings = SETTINGS.get(args.variant, DEFAULT_SETTINGS)
+            writer = writer or (OllamaWriter(args.ollama, *settings, cpu_only=args.cpu_only) if args.ollama else Writer(args.model, *settings))
             conversation = "\n".join(f"{speaker}: {line}" for speaker, line in session.turns)
             prompt = PROMPT.format(date=date, conversation=conversation)
             attempts = []

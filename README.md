@@ -131,6 +131,9 @@ What local writing costs per session (8 sessions of S8, one attempt each, no inv
 |---|---|---|---|
 | Qwen3.5-4B v1 | 96 s | 15.7 min | **1,509 s wall, 250.8 min CPU** (looped to 4,096 tokens: 201 raw cards, 29 distinct, 9 of them "Not specified") |
 | Qwen3.5-4B v2 | 95 s | 15.6 min | 171 s wall, 28.2 min CPU (479 tokens) |
+| Qwen3.5-4B Q4_K_M (Ollama, CPU only) | 22 s | 3.7 min | 31 s wall, 5.2 min CPU (420 tokens, no loop) |
+
+The quantized writer (the `qwen3.5:4b-q4_K_M` tag of the Ollama library, greedy, thinking off, 2,048-token cap) is 4 times faster and peaks at 5.0 GB of RAM, but its cards are worse: RAG top-10 scores 48.5 against 54.6 for bf16 (−6.1, CI −14.9 to +2.0), below the 52.0 threshold set before the run. bf16 stays the reference and no "seconds per session" claim is made for the quantized version.
 
 The degenerate session of v1 (session 8) is kept as it came out, in the v1 numbers above; without it the other seven sessions take 73 to 140 s. This is one writer, one conversation, one seed.
 
