@@ -1,0 +1,34 @@
+{
+ "conv-26:1": {
+  "ok": true,
+  "watcher_peak_rss_gb": 4.5
+ },
+ "conv-26:5": {
+  "ok": true,
+  "watcher_peak_rss_gb": 5.0
+ },
+ "conv-26:10": {
+  "ok": true,
+  "watcher_peak_rss_gb": 5.5
+ },
+ "conv-26:19": {
+  "ok": true,
+  "watcher_peak_rss_gb": 6.6
+ },
+ "conv-41:1": {
+  "ok": true,
+  "watcher_peak_rss_gb": 4.4
+ },
+ "conv-41:10": {
+  "ok": true,
+  "watcher_peak_rss_gb": 5.5
+ },
+ "conv-41:20": {
+  "ok": true,
+  "watcher_peak_rss_gb": 6.7
+ },
+ "conv-41:32": {
+  "ok": true,
+  "watcher_peak_rss_gb": 7.9
+ }
+}

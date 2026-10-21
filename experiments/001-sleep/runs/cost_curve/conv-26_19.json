@@ -1,0 +1,68 @@
+{
+ "conv": "conv-26",
+ "sessions": 19,
+ "questions": [
+  "How long has Caroline had her current group of friends for?",
+  "How long has Melanie been practicing art?",
+  "What kind of place does Caroline want to create for people?",
+  "What did Mel and her kids make during the pottery workshop?",
+  "How long has Melanie been creating art?"
+ ],
+ "raw_k10": {
+  "prompt_tokens": [
+   535,
+   476,
+   545,
+   567,
+   488
+  ],
+  "prefill_s": [
+   1.211,
+   1.096,
+   1.241,
+   1.291,
+   1.153
+  ],
+  "median_tokens": 535,
+  "median_prefill_s": 1.211,
+  "peak_rss_mb": 4594
+ },
+ "cards_top2": {
+  "prompt_tokens": [
+   156,
+   125,
+   149,
+   140,
+   125
+  ],
+  "prefill_s": [
+   0.45,
+   0.342,
+   0.457,
+   0.467,
+   0.363
+  ],
+  "median_tokens": 140,
+  "median_prefill_s": 0.45,
+  "peak_rss_mb": 4560
+ },
+ "full_context": {
+  "prompt_tokens": [
+   18482,
+   18478,
+   18482,
+   18482,
+   18478
+  ],
+  "prefill_s": [
+   71.677,
+   69.748,
+   72.84,
+   73.251,
+   70.417
+  ],
+  "median_tokens": 18482,
+  "median_prefill_s": 71.677,
+  "peak_rss_mb": 6966
+ }
+}

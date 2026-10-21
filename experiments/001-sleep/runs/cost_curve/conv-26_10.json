@@ -1,0 +1,68 @@
+{
+ "conv": "conv-26",
+ "sessions": 10,
+ "questions": [
+  "When did Melanie run a charity race?",
+  "What events has Caroline participated in to help children?",
+  "What does Melanie think about Caroline's decision to adopt?",
+  "What was grandma's gift to Caroline?",
+  "What did Caroline take away from the book \"Becoming Nicole\"?"
+ ],
+ "raw_k10": {
+  "prompt_tokens": [
+   453,
+   449,
+   428,
+   475,
+   423
+  ],
+  "prefill_s": [
+   1.06,
+   1.001,
+   0.951,
+   1.058,
+   0.945
+  ],
+  "median_tokens": 449,
+  "median_prefill_s": 1.001,
+  "peak_rss_mb": 4565
+ },
+ "cards_top2": {
+  "prompt_tokens": [
+   139,
+   137,
+   150,
+   132,
+   145
+  ],
+  "prefill_s": [
+   0.525,
+   0.534,
+   0.483,
+   0.369,
+   0.439
+  ],
+  "median_tokens": 139,
+  "median_prefill_s": 0.483,
+  "peak_rss_mb": 4551
+ },
+ "full_context": {
+  "prompt_tokens": [
+   9332,
+   9334,
+   9335,
+   9332,
+   9338
+  ],
+  "prefill_s": [
+   31.701,
+   32.187,
+   33.242,
+   32.923,
+   33.229
+  ],
+  "median_tokens": 9334,
+  "median_prefill_s": 32.923,
+  "peak_rss_mb": 5779
+ }
+}

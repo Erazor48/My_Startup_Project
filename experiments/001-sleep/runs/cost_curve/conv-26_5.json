@@ -1,0 +1,68 @@
+{
+ "conv": "conv-26",
+ "sessions": 5,
+ "questions": [
+  "What fields would Caroline be likely to pursue in her educaton?",
+  "When is Caroline going to the transgender conference?",
+  "Why did Caroline choose the adoption agency?",
+  "What does Melanie think about Caroline's decision to adopt?",
+  "What did Melanie and her family do while camping?"
+ ],
+ "raw_k10": {
+  "prompt_tokens": [
+   444,
+   650,
+   517,
+   452,
+   527
+  ],
+  "prefill_s": [
+   1.285,
+   1.479,
+   1.169,
+   1.034,
+   1.237
+  ],
+  "median_tokens": 517,
+  "median_prefill_s": 1.237,
+  "peak_rss_mb": 4572
+ },
+ "cards_top2": {
+  "prompt_tokens": [
+   134,
+   137,
+   143,
+   147,
+   137
+  ],
+  "prefill_s": [
+   0.456,
+   0.484,
+   0.473,
+   0.489,
+   0.495
+  ],
+  "median_tokens": 137,
+  "median_prefill_s": 0.484,
+  "peak_rss_mb": 4538
+ },
+ "full_context": {
+  "prompt_tokens": [
+   4236,
+   4232,
+   4231,
+   4234,
+   4233
+  ],
+  "prefill_s": [
+   13.163,
+   13.524,
+   13.223,
+   13.145,
+   12.917
+  ],
+  "median_tokens": 4233,
+  "median_prefill_s": 13.163,
+  "peak_rss_mb": 5169
+ }
+}

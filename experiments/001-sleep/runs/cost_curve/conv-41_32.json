@@ -1,0 +1,68 @@
+{
+ "conv": "conv-41",
+ "sessions": 32,
+ "questions": [
+  "When did Maria meet Jean?",
+  "What sparked John's interest in improving education and infrastructure in the community?",
+  "What did John host for the veterans in May 2023 as part of the project?",
+  "What new activity did Maria start recently, as mentioned on 3 June, 2023?",
+  "Which activity has John done apart from yoga at the studio?"
+ ],
+ "raw_k10": {
+  "prompt_tokens": [
+   559,
+   602,
+   587,
+   417,
+   511
+  ],
+  "prefill_s": [
+   1.311,
+   1.394,
+   1.375,
+   0.987,
+   1.239
+  ],
+  "median_tokens": 559,
+  "median_prefill_s": 1.311,
+  "peak_rss_mb": 4594
+ },
+ "cards_top2": {
+  "prompt_tokens": [
+   127,
+   143,
+   144,
+   141,
+   129
+  ],
+  "prefill_s": [
+   0.365,
+   0.486,
+   0.496,
+   0.504,
+   0.444
+  ],
+  "median_tokens": 141,
+  "median_prefill_s": 0.486,
+  "peak_rss_mb": 4561
+ },
+ "full_context": {
+  "prompt_tokens": [
+   28413,
+   28421,
+   28427,
+   28428,
+   28419
+  ],
+  "prefill_s": [
+   121.164,
+   123.435,
+   123.371,
+   124.555,
+   120.836
+  ],
+  "median_tokens": 28421,
+  "median_prefill_s": 123.371,
+  "peak_rss_mb": 8289
+ }
+}

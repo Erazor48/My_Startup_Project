@@ -1,0 +1,61 @@
+{
+ "conv": "conv-41",
+ "sessions": 1,
+ "questions": [
+  "What is John's main focus in local politics?",
+  "What sparked John's interest in improving education and infrastructure in the community?",
+  "How did the extra funding help the school shown in the photo shared by John?",
+  "What type of workout class did Maria start doing in December 2023?"
+ ],
+ "raw_k10": {
+  "prompt_tokens": [
+   461,
+   467,
+   463,
+   457
+  ],
+  "prefill_s": [
+   1.446,
+   1.275,
+   1.127,
+   1.306
+  ],
+  "median_tokens": 462.0,
+  "median_prefill_s": 1.291,
+  "peak_rss_mb": 4534
+ },
+ "cards_top2": {
+  "prompt_tokens": [
+   137,
+   143,
+   151,
+   147
+  ],
+  "prefill_s": [
+   0.43,
+   0.431,
+   0.447,
+   0.457
+  ],
+  "median_tokens": 145.0,
+  "median_prefill_s": 0.439,
+  "peak_rss_mb": 4507
+ },
+ "full_context": {
+  "prompt_tokens": [
+   671,
+   675,
+   677,
+   678
+  ],
+  "prefill_s": [
+   1.514,
+   1.531,
+   1.615,
+   1.603
+  ],
+  "median_tokens": 676.0,
+  "median_prefill_s": 1.567,
+  "peak_rss_mb": 4611
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "conv": "conv-41",
+ "sessions": 20,
+ "questions": [
+  "When did Maria go to the beach?",
+  "When did Maria join a gym?",
+  "What is the name of John's one-year-old child?",
+  "What did John receive a certificate for?",
+  "What kind of food did Maria have on her dinner spread iwth her mother?"
+ ],
+ "raw_k10": {
+  "prompt_tokens": [
+   509,
+   512,
+   543,
+   513,
+   538
+  ],
+  "prefill_s": [
+   1.209,
+   1.217,
+   1.29,
+   1.238,
+   1.292
+  ],
+  "median_tokens": 513,
+  "median_prefill_s": 1.238,
+  "peak_rss_mb": 4590
+ },
+ "cards_top2": {
+  "prompt_tokens": [
+   136,
+   132,
+   133,
+   129,
+   134
+  ],
+  "prefill_s": [
+   0.467,
+   0.393,
+   0.472,
+   0.45,
+   0.516
+  ],
+  "median_tokens": 133,
+  "median_prefill_s": 0.467,
+  "peak_rss_mb": 4553
+ },
+ "full_context": {
+  "prompt_tokens": [
+   18698,
+   18697,
+   18702,
+   18698,
+   18706
+  ],
+  "prefill_s": [
+   71.804,
+   71.778,
+   74.085,
+   71.554,
+   72.197
+  ],
+  "median_tokens": 18698,
+  "median_prefill_s": 71.804,
+  "peak_rss_mb": 6991
+ }
+}
