@@ -1,0 +1,74 @@
+[
+ {
+  "q": "What date was the conversation held?",
+  "a": "3 August 2023"
+ },
+ {
+  "q": "What date did John start volunteering at the homeless shelter?",
+  "a": "August 2022"
+ },
+ {
+  "q": "Who wrote the note at the shelter?",
+  "a": "Cindy"
+ },
+ {
+  "q": "What date did John and Maria visit the military memorial?",
+  "a": "20 August 2023"
+ },
+ {
+  "q": "Who did John take to the military memorial?",
+  "a": "his kids"
+ },
+ {
+  "q": "What activity is John participating in?",
+  "a": "virtual support group"
+ },
+ {
+  "q": "What cause is John's support group advocating for?",
+  "a": "the military"
+ },
+ {
+  "q": "What activity is Maria doing to help veterans?",
+  "a": "volunteering at a homeless shelter"
+ },
+ {
+  "q": "What specific event motivated Maria to start volunteering?",
+  "a": "witnessing a family struggling on the streets"
+ },
+ {
+  "q": "What is the name of the homeless shelter?",
+  "a": "unknown"
+ },
+ {
+  "q": "What is the name of the military memorial?",
+  "a": "unknown"
+ },
+ {
+  "q": "What did John's kids feel when they saw the military memorial?",
+  "a": "awestruck and humbled"
+ },
+ {
+  "q": "What trait does John display by organizing a support group?",
+  "a": "leadership"
+ },
+ {
+  "q": "What trait does Maria display by volunteering at a shelter?",
+  "a": "compassion"
+ },
+ {
+  "q": "What is John's opinion on teamwork?",
+  "a": "it can accomplish amazing things"
+ },
+ {
+  "q": "What is Maria's opinion on teaching kids about veterans?",
+  "a": "it is super important"
+ },
+ {
+  "q": "What object did John show Maria?",
+  "a": "a picture"
+ },
+ {
+  "q": "What emotion did the note from Cindy express?",
+  "a": "gratitude"
+ }
+]

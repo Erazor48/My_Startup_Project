@@ -1,0 +1,50 @@
+[
+ {
+  "q": "What was John doing on 25 May 2023?",
+  "a": "Doing a petition"
+ },
+ {
+  "q": "When did John and his workmates go on a hiking trip?",
+  "a": "Before 25 May 2023"
+ },
+ {
+  "q": "What is Maria's job?",
+  "a": "Working at a shelter"
+ },
+ {
+  "q": "When is Maria's fundraiser?",
+  "a": "Next week after 25 May 2023"
+ },
+ {
+  "q": "What event is Maria organizing for her fundraiser?",
+  "a": "A chili cook-off"
+ },
+ {
+  "q": "What did John send Maria?",
+  "a": "A picture of his workmates"
+ },
+ {
+  "q": "What did John send Maria later in the conversation?",
+  "a": "A picture of his family"
+ },
+ {
+  "q": "Where did John's family go in the picture?",
+  "a": "The beach"
+ },
+ {
+  "q": "What is John's relationship to the people in the hiking picture?",
+  "a": "Workmates"
+ },
+ {
+  "q": "What is Maria's goal for the fundraiser?",
+  "a": "To cover basic needs for the homeless"
+ },
+ {
+  "q": "What is John's plan regarding the fundraiser?",
+  "a": "To spread the word and find volunteers"
+ },
+ {
+  "q": "What does John believe about working with Maria?",
+  "a": "It is awesome and makes a difference"
+ }
+]

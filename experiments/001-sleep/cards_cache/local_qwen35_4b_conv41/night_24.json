@@ -1,0 +1,66 @@
+[
+ {
+  "q": "What did John visit last week?",
+  "a": "A veteran's hospital"
+ },
+ {
+  "q": "Who did John meet at the hospital?",
+  "a": "Some veterans"
+ },
+ {
+  "q": "What did John learn from Samuel?",
+  "a": "Cool stories"
+ },
+ {
+  "q": "What is Samuel?",
+  "a": "An elderly veteran"
+ },
+ {
+  "q": "What did Maria do last weekend?",
+  "a": "Had a picnic"
+ },
+ {
+  "q": "Who did Maria picnic with?",
+  "a": "Friends from church"
+ },
+ {
+  "q": "What games did Maria and her friends play?",
+  "a": "Charades and a scavenger hunt"
+ },
+ {
+  "q": "When did John see the arts and crafts event?",
+  "a": "Last month"
+ },
+ {
+  "q": "What is the absolute date of the conversation?",
+  "a": "17 July 2023"
+ },
+ {
+  "q": "What is the absolute date of John's hospital visit?",
+  "a": "10 July 2023"
+ },
+ {
+  "q": "What is the absolute date of Maria's picnic?",
+  "a": "24 July 2023"
+ },
+ {
+  "q": "What is the absolute date of the arts and crafts event?",
+  "a": "17 August 2023"
+ },
+ {
+  "q": "What does John plan to do with his kids?",
+  "a": "Set up games"
+ },
+ {
+  "q": "What does John want to do in the future?",
+  "a": "Join the military"
+ },
+ {
+  "q": "What does John want to do for his family?",
+  "a": "Try out arts and crafts"
+ },
+ {
+  "q": "What does John want to do for his community?",
+  "a": "Spread positivity and make a difference"
+ }
+]

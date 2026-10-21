@@ -1,0 +1,66 @@
+[
+ {
+  "q": "What class did Maria take recently?",
+  "a": "creative writing class"
+ },
+ {
+  "q": "What is John running for?",
+  "a": "office"
+ },
+ {
+  "q": "Where has Maria been volunteering?",
+  "a": "a homeless shelter"
+ },
+ {
+  "q": "When did Maria meet Jean?",
+  "a": "yesterday"
+ },
+ {
+  "q": "What is Jean's full name?",
+  "a": "Jean"
+ },
+ {
+  "q": "What personal events did Jean experience?",
+  "a": "divorce, losing her job, and becoming homeless"
+ },
+ {
+  "q": "Who invited John to a yoga class?",
+  "a": "Rob"
+ },
+ {
+  "q": "What type of yoga class is John attending?",
+  "a": "beginner's yoga class"
+ },
+ {
+  "q": "What date is this conversation taking place?",
+  "a": "25 February 2023"
+ },
+ {
+  "q": "What date did Maria meet Jean?",
+  "a": "26 February 2023"
+ },
+ {
+  "q": "What is John's profession or role?",
+  "a": "candidate for office"
+ },
+ {
+  "q": "What is Maria's profession or role?",
+  "a": "volunteer"
+ },
+ {
+  "q": "What trait does Jean display?",
+  "a": "optimism and resilience"
+ },
+ {
+  "q": "What activity is Maria doing to make a positive impact?",
+  "a": "volunteering"
+ },
+ {
+  "q": "What activity is John doing to make a positive impact?",
+  "a": "running for office"
+ },
+ {
+  "q": "What does John plan to do with Maria?",
+  "a": "make positive change together"
+ }
+]
